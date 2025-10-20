@@ -4268,14 +4268,16 @@
         const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
         const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
         const popSearch = document.getElementById("pop_search");
+        const popCatalog = document.getElementById("pop_catalog");
         let scrollDirection = 0;
         let timer;
         document.addEventListener("windowScroll", function() {
             const scrollTop = window.scrollY;
             clearTimeout(timer);
             if (popSearch) if (scrollTop > startPoint) popSearch.classList.add("_pop-fix"); else popSearch.classList.remove("_pop-fix");
+            if (popCatalog) if (scrollTop > startPoint) popCatalog.classList.add("_pop-fix"); else popCatalog.classList.remove("_pop-fix");
             if (scrollTop >= startPoint) {
-                !header.classList.contains("_header-scroll") && header.classList.add("_header-scroll");
+                if (!header.classList.contains("_header-scroll")) header.classList.add("_header-scroll");
                 if (headerShow) {
                     if (scrollTop > scrollDirection) header.classList.remove("_header-show"); else header.classList.add("_header-show");
                     timer = setTimeout(() => {

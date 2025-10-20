@@ -1991,6 +1991,10 @@ body::after {
     top: 4.75rem;
     height: calc(100% - 4.75rem)
   }
+  .modal.modal--active.modal_catalog._pop-fix {
+    top: 4.75rem;
+    height: calc(100% - 4.75rem)
+  }
   .category-main .swiper-pagination-bullet {
     display: none
   }
