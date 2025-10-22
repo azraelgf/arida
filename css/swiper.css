@@ -1,0 +1,46 @@
+.swiper {
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0
+}
+.swiper.benefits__slider {
+    visibility: visible;
+    opacity: 1
+}
+.swiper-initialized {
+    touch-action: pan-y;
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s ease-in-out
+}
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    display: flex;
+    position: relative
+}
+.swiper-vertical .swiper-wrapper {
+    flex-direction: column
+}
+.swiper-autoheight .swiper-wrapper {
+    align-items: flex-start
+}
+.swiper-initialized .swiper-slide {
+    flex-shrink: 0
+}
+.swiper-android .swiper-slide,
+.swiper-android .swiper-wrapper {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0)
+}
+.swiper-button-lock {
+    display: none!important
+}
+.swiper-grid>.swiper-wrapper {
+    flex-wrap: wrap
+}
+.swiper-grid-column>.swiper-wrapper {
+    flex-wrap: wrap;
+    flex-direction: column
+}
