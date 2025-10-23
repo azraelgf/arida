@@ -193,6 +193,10 @@ body.no-scroll {
     width: 1rem;
     height: 1rem
 }
+.button__icon-filter {
+    width: 1.0625rem;
+    height: 1.0625rem
+}
 .button_fw {
     width: 100%
 }
@@ -250,6 +254,12 @@ body.no-scroll {
     min-height: 2.25rem;
     font-size: .875rem;
     background: rgba(38,38,38,.75)
+}
+.button.filter-content__btn {
+    min-height: 2.5rem;
+    padding: 5px 20px;
+    font-size: .875rem;
+    font-weight: 500
 }
 .page {
     padding-top: 11.4375rem
@@ -372,9 +382,12 @@ body.no-scroll {
 .section__title {
     margin-bottom: 2.5rem
 }
+.section_inner .section__title {
+    margin-bottom: 1.875rem
+}
 .section.section_bottom {
     padding-top: 0;
-    padding-bottom: 2.5rem
+    padding-bottom: 6.25rem
 }
 @media (min-width:29.99875em) {
     .products__slider .swiper-pagination {
@@ -392,6 +405,9 @@ body.no-scroll {
 @media (min-width:96em) {
     [class*=__container] {
         padding: 0 2.5rem
+    }
+    .catalog-items .button.product__btn {
+        font-size: 1rem
     }
     .title {
         font-size: 2.125rem
@@ -416,6 +432,13 @@ body.no-scroll {
 @media (max-width:74.99875em) {
     .page {
         padding-top: 7.3125rem
+    }
+}
+@media (max-width:61.99875em) {
+    .catalog-items .button.product__btn {
+        min-height: 2.5rem;
+        min-width: 100%;
+        padding: .3125rem 1.25rem
     }
 }
 @media (max-width:47.99875em) {
@@ -444,6 +467,13 @@ body.no-scroll {
     .button.product__try {
         min-width: initial
     }
+    .button.filter-content__btn {
+        font-size: .75rem;
+        padding: .3125rem 1rem
+    }
+    .catalog-items .button.product__btn {
+        min-height: 2.5rem
+    }
     .product__images-body .swiper-pagination {
         margin-top: -1rem
     }
@@ -453,25 +483,34 @@ body.no-scroll {
     .section__title {
         margin-bottom: 1.25rem
     }
+    .section_inner .section__title {
+        margin-bottom: 1.25rem
+    }
     .section.section_bottom {
         padding-top: 0;
-        padding-bottom: 1.25rem
+        padding-bottom: 3.125rem
     }
 }
 @media (max-width:22.5em) {
+    .catalog-items .button.product__btn {
+        font-size: .75rem
+    }
     .title {
-        font-size: 1.25rem
+        font-size: 1.5rem
     }
     .title.title_h3 {
-        font-size: 1.125rem
+        font-size: 1.25rem
     }
 }
 @media (min-width:22.5em)and (max-width:96em) {
+    .catalog-items .button.product__btn {
+        font-size: clamp(.75rem ,.6734693878rem + .3401360544vw ,1rem)
+    }
     .title {
-        font-size: clamp(1.25rem ,.9821428571rem + 1.1904761905vw ,2.125rem)
+        font-size: clamp(1.5rem ,1.3086734694rem + .8503401361vw ,2.125rem)
     }
     .title.title_h3 {
-        font-size: clamp(1.125rem ,1.0102040816rem + .5102040816vw ,1.5rem)
+        font-size: clamp(1.25rem ,1.1734693878rem + .3401360544vw ,1.5rem)
     }
 }
 @media (any-hover:hover) {

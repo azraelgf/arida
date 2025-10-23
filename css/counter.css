@@ -56,6 +56,11 @@
         font-size: 1.5rem
     }
 }
+@media (max-width:61.99875em) {
+    .catalog-wrapper .quantity {
+        height: 2.5rem
+    }
+}
 @media (max-width:22.5em) {
     .quantity__input input {
         font-size: 1rem

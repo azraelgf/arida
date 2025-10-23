@@ -95,9 +95,6 @@
 .middle-footer .top-footer__menu ul {
     grid-template-columns: 1fr
 }
-.top-footer__info ul {
-    grid-template-columns: 1fr
-}
 .middle-footer__wrapper {
     display: flex;
     gap: 1.25rem;
@@ -213,6 +210,9 @@
     .top-footer__menu ul li a {
         font-size: 1rem
     }
+    .top-footer__info ul {
+        grid-template-columns: 1fr
+    }
     .middle-footer__documents li a {
         font-size: 1rem
     }
@@ -244,7 +244,8 @@
 }
 @media (max-width:74.99875em) {
     .top-footer__container {
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        row-gap: 2.5rem
     }
     .top-footer__col {
         flex: 1 1 100%

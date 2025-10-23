@@ -1,4 +1,5 @@
 .product {
+    min-height: 100%;
     position: relative;
     display: flex;
     transition: all .3s ease-in-out;
@@ -8,7 +9,6 @@
     max-width: 100%;
     background-color: var(--white);
     min-height: 100%;
-    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     transition: all .3s ease-in-out
@@ -160,6 +160,7 @@
 .item-parameter {
     color: var(--secondary);
     display: flex;
+    align-items: center;
     gap: .5rem;
     line-height: 1.2
 }
@@ -223,6 +224,9 @@
     .product__title {
         font-size: 1rem
     }
+    .catalog-items .product__title {
+        font-size: 1rem
+    }
     .product__price-current {
         font-size: 1.125rem
     }
@@ -231,6 +235,29 @@
     }
     .item-parameter {
         font-size: .875rem
+    }
+    .catalog-items .item-parameter {
+        font-size: .875rem
+    }
+}
+@media (max-width:61.99875em) {
+    .catalog-items .product__beige {
+        font-size: .625rem
+    }
+    .catalog-items .product__footer-inner {
+        flex-wrap: wrap;
+        gap: .625rem
+    }
+    .catalog-items .product__actions {
+        flex: 1 1 100%
+    }
+}
+@media (max-width:47.99875em) {
+    .product__beiges {
+        gap: .3125rem
+    }
+    .catalog-items .product__try {
+        display: none
     }
 }
 @media (max-width:29.99875em) {
@@ -243,8 +270,19 @@
     .product__fav {
         top: .625rem
     }
+    .catalog-items .product__fav {
+        width: 1.25rem;
+        height: 1.25rem
+    }
+    .catalog-items .product__fav svg {
+        width: .625rem;
+        height: .625rem
+    }
     .product__beiges {
         top: .625rem
+    }
+    .product__beige {
+        padding: .3125rem .625rem
     }
     .product__footer-inner {
         flex-wrap: wrap;
@@ -262,6 +300,9 @@
     .product__title {
         font-size: .875rem
     }
+    .catalog-items .product__title {
+        font-size: .75rem
+    }
     .product__price-current {
         font-size: 1rem
     }
@@ -271,10 +312,16 @@
     .item-parameter {
         font-size: .75rem
     }
+    .catalog-items .item-parameter {
+        font-size: .625rem
+    }
 }
 @media (min-width:22.5em)and (max-width:96em) {
     .product__title {
         font-size: clamp(.875rem ,.8367346939rem + .1700680272vw ,1rem)
+    }
+    .catalog-items .product__title {
+        font-size: clamp(.75rem ,.6734693878rem + .3401360544vw ,1rem)
     }
     .product__price-current {
         font-size: clamp(1rem ,.9617346939rem + .1700680272vw ,1.125rem)
@@ -284,6 +331,9 @@
     }
     .item-parameter {
         font-size: clamp(.75rem ,.7117346939rem + .1700680272vw ,.875rem)
+    }
+    .catalog-items .item-parameter {
+        font-size: clamp(.625rem ,.5484693878rem + .3401360544vw ,.875rem)
     }
 }
 @media (any-hover:hover) {

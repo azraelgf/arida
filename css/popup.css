@@ -132,7 +132,7 @@
 }
 @media (max-width:29.99875em) {
     .popup__box {
-        padding: 2rem 1.25rem .625rem
+        padding: 2rem 1.25rem 1.25rem
     }
     .popup__header {
         padding-bottom: 1rem

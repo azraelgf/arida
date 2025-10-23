@@ -1,0 +1,194 @@
+.catalog:not(:last-child) {
+    margin-bottom: 6.25rem
+}
+.catalog__footer {
+    margin-top: 1.25rem;
+    display: grid;
+    gap: 2.5rem;
+    justify-content: center
+}
+.filter-content__navigation {
+    margin-bottom: 2.1875rem
+}
+.filter-content__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-bottom: 1.875rem
+}
+.filter-content__btns {
+    display: flex;
+    gap: 1.875rem;
+    align-items: center
+}
+.filter-content__reset {
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    font-weight: 500;
+    transition: color .3s ease-in-out
+}
+.filter-content__reset svg {
+    color: var(--primary);
+    width: .625rem;
+    height: .625rem;
+    transition: color .3s ease-in-out
+}
+.filter-content__filters {
+    margin-bottom: 1.875rem
+}
+.navigation-filter {
+    display: flex;
+    gap: .625rem;
+    overflow-x: auto;
+    padding-bottom: .3125rem
+}
+.navigation-filter__link {
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary);
+    color: var(--secondary);
+    min-height: 2.5rem;
+    padding: .625rem 1.5625rem;
+    border-radius: 6.25rem;
+    font-weight: 500;
+    border: 2px solid var(--bg-primary);
+    transition: all .3s ease-in-out
+}
+.navigation-filter__link._active {
+    background-color: var(--white);
+    border-color: var(--primary);
+    color: var(--primary)
+}
+.catalog-filter {
+    display: flex;
+    gap: 1.25rem
+}
+.catalog-filter.catalog-filter_empty {
+    display: none
+}
+.catalog-filter__title {
+    font-weight: 500;
+    font-size: 1rem
+}
+.catalog-filter__wrapper {
+    display: flex;
+    align-items: center;
+    gap: .3125rem 1rem;
+    flex-wrap: wrap
+}
+.catalog-filter__item {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    color: var(--secondary);
+    transition: color .3s ease-in-out
+}
+.catalog-filter__item svg {
+    width: .5rem;
+    height: .5rem;
+    transition: color .3s ease-in-out
+}
+.catalog-items {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.25rem
+}
+@media (min-width:29.99875em) {
+    .filter-content__sort {
+        min-width: 13.125rem
+    }
+}
+@media (min-width:61.99875em) {
+    .catalog-items {
+        position: relative;
+        z-index: 2;
+        isolation: isolate;
+        overflow: visible
+    }
+    .catalog-items .product:focus-within,
+    .catalog-items .product:hover {
+        z-index: 10
+    }
+}
+@media (min-width:96em) {
+    .navigation-filter__link {
+        font-size: .875rem
+    }
+}
+@media (max-width:81.24875em) {
+    .catalog-items {
+        grid-template-columns: repeat(3,1fr)
+    }
+}
+@media (max-width:61.99875em) {
+    .catalog__footer {
+        margin-top: 1.875rem
+    }
+}
+@media (max-width:47.99875em) {
+    .catalog:not(:last-child) {
+        margin-bottom: 3.125rem
+    }
+    .catalog__footer {
+        gap: 1.625rem
+    }
+    .filter-content__navigation {
+        margin-bottom: .9375rem
+    }
+    .filter-content__actions {
+        margin-bottom: 1.25rem;
+        gap: 1rem
+    }
+    .filter-content__reset {
+        display: none
+    }
+    .catalog-filter {
+        display: none
+    }
+    .catalog-items {
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 2.5rem
+    }
+}
+@media (max-width:29.99875em) {
+    .filter-content__btn {
+        flex: 1 1 50%;
+        min-width: 9.375rem
+    }
+    .filter-content__sort {
+        min-width: 9.375rem;
+        flex: 1 1 50%
+    }
+}
+@media (max-width:22.5em) {
+    .navigation-filter__link {
+        font-size: .75rem
+    }
+}
+@media (min-width:22.5em)and (max-width:96em) {
+    .navigation-filter__link {
+        font-size: clamp(.75rem ,.7117346939rem + .1700680272vw ,.875rem)
+    }
+}
+@media (any-hover:hover) {
+    .filter-content__reset:hover {
+        color: var(--red)
+    }
+    .filter-content__reset:hover svg {
+        color: var(--red)
+    }
+    .navigation-filter__link:hover {
+        background-color: var(--white);
+        border-color: var(--primary);
+        color: var(--primary)
+    }
+    .catalog-filter__item:hover {
+        color: var(--red)
+    }
+}
