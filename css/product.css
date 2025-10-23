@@ -248,6 +248,9 @@
         flex-wrap: wrap;
         gap: .625rem
     }
+    .catalog-items .product__try {
+        display: none
+    }
     .catalog-items .product__actions {
         flex: 1 1 100%
     }
@@ -255,9 +258,6 @@
 @media (max-width:47.99875em) {
     .product__beiges {
         gap: .3125rem
-    }
-    .catalog-items .product__try {
-        display: none
     }
 }
 @media (max-width:29.99875em) {

@@ -113,10 +113,6 @@ h6 {
     -o-object-fit: contain;
     object-fit: contain
 }
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px
-}
 ::-webkit-scrollbar-thumb {
     background-color: #bcc5af;
     border-radius: 10px
@@ -261,6 +257,10 @@ body.no-scroll {
     font-size: .875rem;
     font-weight: 500
 }
+.catalog__footer .button {
+    min-height: 2.5rem;
+    padding: 5px 20px
+}
 .page {
     padding-top: 11.4375rem
 }
@@ -390,6 +390,11 @@ body.no-scroll {
     padding-bottom: 6.25rem
 }
 @media (min-width:29.99875em) {
+    .catalog__footer .button {
+        min-width: 11.875rem;
+        width: -webkit-max-content;
+        width: max-content
+    }
     .products__slider .swiper-pagination {
         display: none
     }
@@ -400,6 +405,12 @@ body.no-scroll {
 @media (min-width:47.99875em) {
     .category-main .swiper-pagination-bullet {
         display: none
+    }
+}
+@media (min-width:61.99875em) {
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px
     }
 }
 @media (min-width:96em) {

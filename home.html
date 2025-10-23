@@ -2374,7 +2374,7 @@
 				Избранное
 				<span class="cart-counter js-favorite">14</span>
 			</a></li>
-			<li class="menu-fix__item"><a href="">
+			<li class="menu-fix__item"><a href="#" data-opener data-popup="pop-log">
 				<svg>
 					<use xlink:href="img/icons/icons.svg#user"></use>
 				</svg>
@@ -2981,7 +2981,6 @@
 	</div>
 </div>
 
-
 <!--при открытом состоянии добавляется класс popup-opened-->
 <div class="popup " id="pop-log">
 	<div class="popup__overlay"></div>
@@ -3007,7 +3006,7 @@
 						<input class="form__input input" autocomplete="off" type="password" name="form[]" placeholder="Пароль ">
 					</div>
 					<div class="form__row">
-						<button class="form__link" data-opener data-popup="pop-authorization">Забыли свой пароль?</button>
+						<button class="form__link" data-opener data-popup="pop-authorization" type="button">Забыли свой пароль?</button>
 					</div>
 					<div class="form__row">
 						<button class="button button_black button_fw" type="submit">Войти</button>

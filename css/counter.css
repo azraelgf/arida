@@ -57,7 +57,7 @@
     }
 }
 @media (max-width:61.99875em) {
-    .catalog-wrapper .quantity {
+    .catalog-items .quantity {
         height: 2.5rem
     }
 }

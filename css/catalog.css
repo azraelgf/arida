@@ -5,7 +5,7 @@
     margin-top: 1.25rem;
     display: grid;
     gap: 2.5rem;
-    justify-content: center
+    justify-items: center
 }
 .filter-content__navigation {
     margin-bottom: 2.1875rem

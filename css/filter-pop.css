@@ -14,7 +14,8 @@
 }
 .range__input {
     border: 2px solid var(--border);
-    flex: 0 0 7.5rem
+    flex: 0 0 7.5rem;
+    color: var(--primary)
 }
 .switch {
     display: inline-flex;

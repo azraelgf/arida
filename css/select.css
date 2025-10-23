@@ -424,8 +424,7 @@
 }
 .ts-control,
 .ts-wrapper.single.input-active .ts-control {
-    background: #fff;
-    cursor: text
+    background: #fff
 }
 .ts-hidden-accessible {
     border: 0!important;
