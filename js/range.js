@@ -1681,4 +1681,28 @@
         });
     }
     rangeInit();
+    document.addEventListener("click", e => {
+        const btn = e.target.closest(".js-reset");
+        if (!btn) return;
+        document.querySelectorAll('input[type="checkbox"]').forEach(chk => chk.checked = false);
+        document.querySelectorAll('.filter__main input[type="radio"]').forEach(radio => {
+            radio.checked = false;
+        });
+        document.querySelectorAll(".js-range").forEach(el => {
+            if (!el.noUiSlider) return;
+            const min = +(el.dataset.min ?? 0);
+            const max = +(el.dataset.max ?? 100);
+            const startAttr = (el.dataset.start ?? `${min},${max}`).trim();
+            const startValues = startAttr.split(",").map(v => +v);
+            el.noUiSlider.set(startValues);
+            const wrapper = el.closest(".range") || el.parentElement;
+            const inputStart = wrapper?.querySelector(".js-range-start");
+            const inputEnd = wrapper?.querySelector(".js-range-end");
+            if (inputStart) inputStart.value = startValues[0].toLocaleString("ru-RU");
+            if (inputEnd && startValues[1] != null) inputEnd.value = startValues[1].toLocaleString("ru-RU");
+        });
+        const filterContainer = document.querySelector(".filter-content__filters");
+        if (filterContainer) filterContainer.classList.add("catalog-filter_empty");
+        document.dispatchEvent(new CustomEvent("filtersReset"));
+    });
 })();

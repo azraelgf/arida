@@ -78,8 +78,9 @@
 .catalog-filter__wrapper {
     display: flex;
     align-items: center;
-    gap: .3125rem 1rem;
-    flex-wrap: wrap
+    gap: 1rem;
+    flex-wrap: nowrap;
+    overflow: hidden
 }
 .catalog-filter__item {
     white-space: nowrap;
@@ -93,6 +94,9 @@
     width: .5rem;
     height: .5rem;
     transition: color .3s ease-in-out
+}
+.catalog-filter__item_hidden {
+    display: none
 }
 .catalog-items {
     display: grid;
