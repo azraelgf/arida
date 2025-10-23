@@ -13,4 +13,30 @@
         btn.textContent = "Войти";
         btn.type = "submit";
     });
+
+    //ввод чисел для аторизации
+    document.addEventListener('input', (e) => {
+        const input = e.target.closest('.js-input_auth');
+        if (!input) return;
+
+        // Разрешаем только цифры
+        input.value = input.value.replace(/\D/g, '').slice(0, 1);
+
+        if (input.value && input.nextElementSibling?.classList.contains('js-input_auth')) {
+            input.nextElementSibling.focus();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        const input = e.target.closest('.js-input_auth');
+        if (!input) return;
+
+        // При Backspace на пустом поле — переходим назад
+        if (e.key === 'Backspace' && !input.value) {
+            const prev = input.previousElementSibling;
+            if (prev?.classList.contains('js-input_auth')) {
+                prev.focus();
+            }
+        }
+    });
 })();
