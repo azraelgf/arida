@@ -1,0 +1,127 @@
+.form {
+    display: grid;
+    gap: 1.25rem
+}
+.form__row_authorization {
+    display: none;
+    gap: .625rem
+}
+.form__row_authorization._active {
+    display: flex
+}
+.form__input {
+    border: 2px solid var(--border)
+}
+.form__link {
+    text-decoration: underline;
+    transition: color .3s ease-in-out
+}
+input[type=email],
+input[type=tel],
+input[type=text],
+textarea {
+    -webkit-appearance: none;
+    appearance: none
+}
+.input {
+    border-radius: 6.25rem;
+    width: 100%;
+    display: block;
+    padding: 0 20px;
+    caret-color: inherit;
+    font-weight: 500;
+    height: 2.5rem;
+    font-size: .875rem
+}
+.input::-webkit-input-placeholder {
+    color: #d8d8d8
+}
+.input:-ms-input-placeholder {
+    color: #d8d8d8
+}
+.input::-ms-input-placeholder {
+    color: #d8d8d8
+}
+.input::placeholder {
+    color: #d8d8d8
+}
+.search-box .input {
+    padding: 0;
+    border-radius: 0
+}
+.input:focus {
+    outline: 0
+}
+.form__row_authorization .input {
+    text-align: center
+}
+.middle-header__right .input {
+    height: 2.25rem
+}
+.input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s
+}
+.input[placeholder]:not([data-placeholder-nohiden]):-ms-input-placeholder {
+    -ms-transition: opacity .3s;
+    transition: opacity .3s
+}
+.input[placeholder]:not([data-placeholder-nohiden])::-ms-input-placeholder {
+    -ms-transition: opacity .3s;
+    transition: opacity .3s
+}
+.input[placeholder]:not([data-placeholder-nohiden])::placeholder {
+    transition: opacity .3s
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus::-webkit-input-placeholder {
+    opacity: 0
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus:-ms-input-placeholder {
+    opacity: 0
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus::-ms-input-placeholder {
+    opacity: 0
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus::placeholder {
+    opacity: 0
+}
+textarea.input {
+    resize: none;
+    padding: 0 0
+}
+.search-box {
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6.25rem;
+    border: 2px solid var(--primary)
+}
+.middle-header__right .search-box__input {
+    pointer-events: none
+}
+.search-box__btn svg {
+    width: 1.125rem;
+    height: 1.125rem
+}
+.middle-header__right .search-box__btn {
+    pointer-events: none
+}
+@media (max-width:47.99875em) {
+    .middle-header__right .search-box {
+        width: 100%
+    }
+}
+@media (max-width:29.99875em) {
+    .form {
+        gap: 1rem
+    }
+    .input {
+        font-size: .75rem
+    }
+}
+@media (any-hover:hover) {
+    .form__link:hover {
+        color: var(--bg-accent)
+    }
+}
