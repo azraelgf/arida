@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Акции</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/common.css?_v=1">
+	<link rel="stylesheet" href="css/header.css?_v=1">
+	<link rel="stylesheet" href="css/footer.css?_v=1">
+	<link rel="stylesheet" href="css/swiper.css?_v=1">
+	<link rel="stylesheet" href="css/breadcrumbs.css?_v=1">
+	<link rel="stylesheet" href="css/modal.css?_v=1">
+	<link rel="stylesheet" href="css/popup.css?_v=1">
+	<link rel="stylesheet" href="css/counter.css?_v=1">
+	<link rel="stylesheet" href="css/form.css?_v=1">
+	<link rel="stylesheet" href="css/product.css?_v=1">
+	<link rel="stylesheet" href="css/showmore.css?_v=1">
+	<link rel="stylesheet" href="css/pagging.css?_v=1">
+	<link rel="stylesheet" href="css/seo-block.css?_v=1">
+	<link rel="stylesheet" href="css/notification.css?_v=1">
+	<link rel="stylesheet" href="css/more-block.css?_v=1">
+	<link rel="stylesheet" href="css/catalog.css?_v=1">
+	<link rel="stylesheet" href="css/timer.css?_v=1">
+	<link rel="stylesheet" href="css/catalog-sales.css?_v=1">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--	 <style>body{opacity: 0;}</style>-->
+	<style>
+		/* Начальное состояние */
+		body {
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
+		}
+
+		/* Класс, добавляемый после загрузки */
+		html.loaded body {
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-scroll="120" data-scroll-show>
+			<div class="header__top top-header">
+				<div class="top-header__container">
+					<div class="top-header__left">
+						<button class="top-header__address modal-btn" type="button" data-modal-name="pop_address">
+							<svg class="top-header__address-icon">
+								<use xlink:href="img/icons/icons.svg#bookmark"></use>
+							</svg>
+							<span class="top-header__address-text">Москва</span>
+							<svg class="top-header__address-icon">
+								<use xlink:href="img/icons/icons.svg#dropdown"></use>
+							</svg>
+						</button>
+						<a href="tel:+78002500700" class="top-header__tel">+7 (800) 2-500-700</a>
+					</div>
+					<nav class="top-header__right">
+						<ul class="top-header__list">
+							<li class="top-header__item">
+								<a href="" class="top-header__link">Адреса магазинов <span>84</span></a>
+							</li>
+							<li>
+								<a href="" class="top-header__link">О фабрике </a>
+							</li>
+							<li class="top-header__item">
+								<a href="" class="top-header__link">Стать партнером</a>
+							</li>
+							<li class="top-header__item">
+								<a href="" class="top-header__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="header__middle middle-header">
+				<div class="middle-header__container">
+					<div class="middle-header__left">
+						<a href="/" class="middle-header__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+						<nav class="middle-header__menu">
+							<ul class="middle-header__list menu-middle">
+								<li class="menu-middle__item">
+									<button class="menu-middle__link menu-middle__link-catalog modal-btn" data-modal-name="pop_catalog" type="button">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#burger"></use>
+										</svg>
+										Каталог
+									</button>
+								</li>
+								<li class="menu-middle__item"><a class="menu-middle__link" href="">Коллекции</a></li>
+								<li class="menu-middle__item"><a class="menu-middle__link" href="">Модульные кухни</a></li>
+								<li class="menu-middle__item"><a class="menu-middle__link" href="">Интерьерные кровати</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="middle-header__right">
+						<div class="middle-header__right-search">
+							<div class="search-box modal-btn" data-modal-name="pop_search">
+								<input readonly class="input search-box__input" autocomplete="off" type="text" placeholder="Поиск">
+								<span class="search-box__btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#search"></use>
+									</svg>
+								</span>
+							</div>
+						</div>
+						<a href="" class="middle-header__link middle-header__link_heart">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#fav"></use>
+							</svg>
+							<span class="cart-counter js-favorite">14</span>
+						</a>
+						<button class="middle-header__link" data-opener data-popup="pop-log">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#user"></use>
+							</svg>
+						</button>
+						<a href="" class="middle-header__link">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#cart"></use>
+							</svg>
+							<span class="cart-counter js-cart">14</span>
+						</a>
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom bottom-header">
+				<div class="bottom-header__container">
+					<div class="bottom-header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item menu__item_catalog">
+									<a href="#" class="menu__link">Каталог</a>
+								</li>
+								<li class="menu__item menu__item_sale"><a href="#" class="menu__link"><span class="menu__link-text"><span>%</span>Акции</span></a></li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Кухни</a>
+									<div class="menu__mobile-submenu mobile-submenu">
+										<button class="mobile-submenu__back" type="button">
+											<svg class="btn-back__icon">
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+											Вернуться назад
+										</button>
+										<ul class="mobile-submenu__wrapper">
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link mobile-submenu__link-title" href="">
+													Кухни
+													<svg>
+														<use xlink:href="img/icons/icons.svg#dropdown"></use>
+													</svg>
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Кухонные наборы
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Кухни
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Кухонные острова
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Столы и стулья
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Гостиные</a>
+									<div class="menu__mobile-submenu mobile-submenu">
+										<button class="mobile-submenu__back" type="button">
+											<svg class="btn-back__icon">
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+											Вернуться назад
+										</button>
+										<ul class="mobile-submenu__wrapper">
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link mobile-submenu__link-title" href="">
+													Гостиные
+													<svg>
+														<use xlink:href="img/icons/icons.svg#dropdown"></use>
+													</svg>
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Комплекты для гостиной
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Пеналы
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Витрины
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Тумбы под телевизор
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Комоды с зеркалами
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Спальни</a>
+									<div class="menu__mobile-submenu mobile-submenu">
+										<button class="mobile-submenu__back" type="button">
+											<svg class="btn-back__icon">
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+											Вернуться назад
+										</button>
+										<ul class="mobile-submenu__wrapper">
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link mobile-submenu__link-title" href="">
+													Спальни
+													<svg>
+														<use xlink:href="img/icons/icons.svg#dropdown"></use>
+													</svg>
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Комплекты для спальни
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Кровати
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Шкафы
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Комоды
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Туалетные столы
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Прикроватные тумбы
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Зеркала
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Мягкая мебель</a>
+									<div class="menu__mobile-submenu mobile-submenu">
+										<button class="mobile-submenu__back" type="button">
+											<svg class="btn-back__icon">
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+											Вернуться назад
+										</button>
+										<ul class="mobile-submenu__wrapper">
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link mobile-submenu__link-title" href="">
+													Мягкая мебель
+													<svg>
+														<use xlink:href="img/icons/icons.svg#dropdown"></use>
+													</svg>
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Комплекты мягкой мебели
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Кресла
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Диваны
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Столы и стулья</a>
+									<div class="menu__mobile-submenu mobile-submenu">
+										<button class="mobile-submenu__back" type="button">
+											<svg class="btn-back__icon">
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+											Вернуться назад
+										</button>
+										<ul class="mobile-submenu__wrapper">
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link mobile-submenu__link-title" href="">
+													Столы и стулья
+													<svg>
+														<use xlink:href="img/icons/icons.svg#dropdown"></use>
+													</svg>
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Комплекты столов и стульев
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Столы
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Стулья
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Журнальные столики
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Шкафы-купе</a>
+									<div class="menu__mobile-submenu mobile-submenu">
+										<button class="mobile-submenu__back" type="button">
+											<svg class="btn-back__icon">
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+											Вернуться назад
+										</button>
+										<ul class="mobile-submenu__wrapper">
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link mobile-submenu__link-title" href="">
+													Шкафы-купе
+													<svg>
+														<use xlink:href="img/icons/icons.svg#dropdown"></use>
+													</svg>
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													2-створчатые
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													3-створчатые
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Дизайнерские решения</a>
+									<div class="menu__mobile-submenu mobile-submenu">
+										<button class="mobile-submenu__back" type="button">
+											<svg class="btn-back__icon">
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+											Вернуться назад
+										</button>
+										<ul class="mobile-submenu__wrapper">
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link mobile-submenu__link-title" href="">
+													Дизайнерские решения
+													<svg>
+														<use xlink:href="img/icons/icons.svg#dropdown"></use>
+													</svg>
+												</a>
+											</li>
+											<li class="mobile-submenu__item">
+												<a class="mobile-submenu__link" href="">
+													Интерьерные кровати
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link-btn button">
+										<svg class="button__icon">
+											<use xlink:href="img/icons/icons.svg#zip"></use>
+										</svg>
+										Конструктор
+									</a>
+								</li>
+							</ul>
+							<ul class="menu__mobile">
+								<li class="menu__mobile-item"><a class="menu__mobile-link" href="">Коллекции</a></li>
+								<li class="menu__mobile-item"><a class="menu__mobile-link" href="">Модульные кухни</a></li>
+								<li class="menu__mobile-item"><a class="menu__mobile-link" href="">Интерьерные кровати</a></li>
+							</ul>
+							<ul class="menu__tablet">
+								<li class="menu__tablet-item"><a class="menu__tablet-link" href="">Адреса магазинов
+										<span>(84)</span> </a></li>
+								<li class="menu__tablet-item"><a class="menu__tablet-link" href="">О фабрике</a></li>
+								<li class="menu__tablet-item"><a class="menu__tablet-link" href="">Стать партнером</a></li>
+								<li class="menu__tablet-item"><a class="menu__tablet-link" href="">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<nav class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><span class="breadcrumbs__current">Акции</span></li>
+					</ul>
+				</div>
+			</nav>
+			<section class="section section_inner section_bottom">
+				<div class="section__container">
+					<h1 class="section__title title">Акции</h1>
+					<div class="catalog">
+						<div class="catalog__filter filter-content">
+							<div class="filter-content__navigation navigation-filter">
+								<a href="" class="navigation-filter__link _active">Все</a>
+								<a href="" class="navigation-filter__link">Кухонные наборы</a>
+								<a href="" class="navigation-filter__link">Кухни</a>
+								<a href="" class="navigation-filter__link">Кухонные острова</a>
+								<a href="" class="navigation-filter__link">Кухонные пеналы</a>
+							</div>
+						</div>
+						<div class="catalog__sales">
+							<div class="sales-item">
+								<a href=" " class="stretched-link"></a>
+								<div class="sales-item__img">
+									<img src="img/sales/01.webp" alt="Image" class="ibg">
+									<div class="sales-item__timer timer" role="timer" aria-label="До конца акции">
+										<div class="timer__title">До конца акции осталось:</div>
+										<div class="timer__body">
+											<div class="timer__item">
+												<div class="timer__item-text">
+													День
+												</div>
+												<div class="timer__item-num" data-days>10</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Час
+												</div>
+												<div class="timer__item-num" data-hours>23</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Мин
+												</div>
+												<div class="timer__item-num" data-minutes>03</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Сек
+												</div>
+												<div class="timer__item-num" data-seconds>03</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sales-item__title">Колекция “Месяца”</div>
+								<div class="sales-item__date">
+									<div class="sales-item__date-label">-40%</div>
+									<div class="sales-item__date-text">Действует до 31.10.2025</div>
+								</div>
+							</div>
+							<div class="sales-item">
+								<a href=" " class="stretched-link"></a>
+								<div class="sales-item__img">
+									<img src="img/sales/02.webp" alt="Image" class="ibg">
+									<div class="sales-item__timer timer" role="timer" aria-label="До конца акции">
+										<div class="timer__title">До конца акции осталось:</div>
+										<div class="timer__body">
+											<div class="timer__item">
+												<div class="timer__item-text">
+													День
+												</div>
+												<div class="timer__item-num" data-days>10</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Час
+												</div>
+												<div class="timer__item-num" data-hours>23</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Мин
+												</div>
+												<div class="timer__item-num" data-minutes>03</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Сек
+												</div>
+												<div class="timer__item-num" data-seconds>03</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sales-item__title">Акция ы 2 строки как то так примерно будет выглядеть</div>
+								<div class="sales-item__date">
+									<div class="sales-item__date-label">-40%</div>
+									<div class="sales-item__date-text">Действует до 31.10.2025</div>
+								</div>
+							</div>
+							<div class="sales-item">
+								<a href=" " class="stretched-link"></a>
+								<div class="sales-item__img">
+									<img src="img/sales/03.webp" alt="Image" class="ibg">
+									<div class="sales-item__timer timer" role="timer" aria-label="До конца акции">
+										<div class="timer__title">До конца акции осталось:</div>
+										<div class="timer__body">
+											<div class="timer__item">
+												<div class="timer__item-text">
+													День
+												</div>
+												<div class="timer__item-num" data-days>00</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Час
+												</div>
+												<div class="timer__item-num" data-hours>59</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Мин
+												</div>
+												<div class="timer__item-num" data-minutes>59</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Сек
+												</div>
+												<div class="timer__item-num" data-seconds>59</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sales-item__title">Колекция “Месяца”</div>
+								<div class="sales-item__date">
+									<div class="sales-item__date-label">-40%</div>
+									<div class="sales-item__date-text">Действует до 31.10.2025</div>
+								</div>
+							</div>
+							<div class="sales-item">
+								<a href=" " class="stretched-link"></a>
+								<div class="sales-item__img">
+									<img src="img/sales/04.webp" alt="Image" class="ibg">
+									<div class="sales-item__timer timer" role="timer" aria-label="До конца акции">
+										<div class="timer__title">До конца акции осталось:</div>
+										<div class="timer__body">
+											<div class="timer__item">
+												<div class="timer__item-text">
+													День
+												</div>
+												<div class="timer__item-num" data-days>10</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Час
+												</div>
+												<div class="timer__item-num" data-hours>23</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Мин
+												</div>
+												<div class="timer__item-num" data-minutes>03</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Сек
+												</div>
+												<div class="timer__item-num" data-seconds>03</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sales-item__title">Колекция “Месяца”</div>
+								<div class="sales-item__date">
+									<div class="sales-item__date-label">-40%</div>
+									<div class="sales-item__date-text">Действует до 31.10.2025</div>
+								</div>
+							</div>
+							<div class="sales-item">
+								<a href=" " class="stretched-link"></a>
+								<div class="sales-item__img">
+									<img src="img/sales/05.webp" alt="Image" class="ibg">
+									<div class="sales-item__timer timer" role="timer" aria-label="До конца акции">
+										<div class="timer__title">До конца акции осталось:</div>
+										<div class="timer__body">
+											<div class="timer__item">
+												<div class="timer__item-text">
+													День
+												</div>
+												<div class="timer__item-num" data-days>10</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Час
+												</div>
+												<div class="timer__item-num" data-hours>23</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Мин
+												</div>
+												<div class="timer__item-num" data-minutes>03</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Сек
+												</div>
+												<div class="timer__item-num" data-seconds>03</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sales-item__title">Колекция “Месяца”</div>
+								<div class="sales-item__date">
+									<div class="sales-item__date-label">-40%</div>
+									<div class="sales-item__date-text">Действует до 31.10.2025</div>
+								</div>
+							</div>
+							<div class="sales-item">
+								<a href=" " class="stretched-link"></a>
+								<div class="sales-item__img">
+									<img src="img/sales/06.webp" alt="Image" class="ibg">
+									<div class="sales-item__timer timer" role="timer" aria-label="До конца акции">
+										<div class="timer__title">До конца акции осталось:</div>
+										<div class="timer__body">
+											<div class="timer__item">
+												<div class="timer__item-text">
+													День
+												</div>
+												<div class="timer__item-num" data-days>00</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Час
+												</div>
+												<div class="timer__item-num" data-hours>59</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Мин
+												</div>
+												<div class="timer__item-num" data-minutes>59</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Сек
+												</div>
+												<div class="timer__item-num" data-seconds>59</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sales-item__title">Колекция “Месяца”</div>
+								<div class="sales-item__date">
+									<div class="sales-item__date-label">-40%</div>
+									<div class="sales-item__date-text">Действует до 31.10.2025</div>
+								</div>
+							</div>
+							<div class="sales-item">
+								<a href=" " class="stretched-link"></a>
+								<div class="sales-item__img">
+									<img src="img/sales/07.webp" alt="Image" class="ibg">
+									<div class="sales-item__timer timer" role="timer" aria-label="До конца акции">
+										<div class="timer__title">До конца акции осталось:</div>
+										<div class="timer__body">
+											<div class="timer__item">
+												<div class="timer__item-text">
+													День
+												</div>
+												<div class="timer__item-num" data-days>10</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Час
+												</div>
+												<div class="timer__item-num" data-hours>23</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Мин
+												</div>
+												<div class="timer__item-num" data-minutes>03</div>
+											</div>
+											<div class="timer__sep">:</div>
+											<div class="timer__item">
+												<div class="timer__item-text">
+													Сек
+												</div>
+												<div class="timer__item-num" data-seconds>03</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sales-item__title">Колекция “Месяца”</div>
+								<div class="sales-item__date">
+									<div class="sales-item__date-label">-40%</div>
+									<div class="sales-item__date-text">Действует до 31.10.2025</div>
+								</div>
+							</div>
+						</div>
+						<div class="catalog__footer more-block">
+							<button class="more-block__btn button button_outline" type="button">Показать еще</button>
+							<div class="more-block__pagging pagging">
+								<a href="" class="pagging__arrow pagging__arrow_right">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+								</a>
+								<ul class="pagging__list">
+									<li>
+										<a href="" class="pagging__item _active">1</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">2</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">3</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">4</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">5</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">...</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">30</a>
+									</li>
+								</ul>
+								<a href="" class="pagging__arrow pagging__arrow_left">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+								</a>
+							</div>
+
+						</div>
+					</div>
+					<div data-showmore class="seo-block">
+						<div class="seo-block__intro">
+							<p>
+								Кухонные наборы мебельной фабрики «Арида»: стиль, качество и функциональность
+							</p>
+
+							<p> Кухня — это сердце дома, где мы проводим много времени, готовим еду, собираемся всей семьёй
+								за ужином или просто пьём чай. Поэтому так важно, чтобы кухонная мебель была не только
+								красивой, но и функциональной. Именно такие кухонные наборы предлагает мебельная фабрика
+								«Арида».</p>
+							<p><strong>Почему стоит выбрать кухонные наборы от «Ариды»?</strong></p>
+						</div>
+
+						<div data-showmore-content="0" class="seo-block__content">
+							<p> <strong>Стиль и дизайн</strong>. Кухонные наборы «Арида» выполнены в современном стиле и идеально впишутся в
+								любой интерьер. Вы можете выбрать из множества вариантов дизайна, цветов и материалов,
+								которые
+								подойдут именно вам.</p>
+
+						</div>
+						<button hidden data-showmore-button type="button" class="seo-block__more">
+							<span>Развернуть</span><span>Свернуть</span></button>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__top top-footer">
+				<div class="top-footer__container">
+					<div class="top-footer__col">
+						<a href="/" class="top-footer__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+						<div class="top-footer__title">Свяжитесь с нами</div>
+						<div class="top-footer__contacts">
+							<a class="top-footer__contacts-tel" href="tel:+78002500700">+7(800) 2 500 700</a>
+							<a class="top-footer__contacts-mail" href="tel:+78002500700">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#mail"></use>
+								</svg>
+								inshop@aridamebel.ru
+							</a>
+							<address class="top-footer__contacts-address">с. Верхнерусское, ул. Батайская, 11</address>
+						</div>
+						<div class="top-footer__action">
+							<a href="" class="top-footer__link"><strong>Написать нам</strong></a>
+							<a href="" class="top-footer__link">Контакты</a>
+						</div>
+						<div class="top-footer__social social">
+							<a href="" class="social__item">
+								<img class="ibg" src="img/icons/social/dzen.webp" alt="Image">
+							</a>
+							<a href="" class="social__item">
+								<img class="ibg" src="img/icons/social/vk.webp" alt="Image">
+							</a>
+						</div>
+					</div>
+					<div class="top-footer__col" data-spoilers="767.98">
+						<div class="top-footer__title" data-spoiler>Каталог</div>
+						<div class="top-footer__menu">
+							<ul>
+								<li><a href="">
+										Кухни
+									</a></li>
+								<li><a href="">
+										<span>%</span> Акции
+									</a></li>
+								<li><a href="">
+										Гостинные
+									</a></li>
+								<li><a href="">
+										<strong> 3D конструктор</strong>
+									</a></li>
+								<li><a href="">
+										Спальни
+									</a></li>
+								<li><a href="">
+										Коллекции
+									</a></li>
+								<li><a href="">
+										Мягкая мебель
+									</a></li>
+								<li><a href="">
+										Столы и стулья
+									</a></li>
+								<li><a href="">
+										Модульные кухни
+									</a></li>
+								<li><a href="">
+										Шкафы-купе
+									</a></li>
+								<li><a href="">
+										Интерьерные кровати
+									</a></li>
+								<li><a href="">
+										Дизайнерские решения
+									</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="top-footer__col" data-spoilers="767.98">
+						<div class="top-footer__title" data-spoiler>Информация для покупателей</div>
+						<div class="top-footer__info">
+							<ul>
+								<li>
+									<a href="">О фабрике </a>
+								</li>
+								<li>
+									<a href="">Стать партнером</a>
+								</li>
+								<li>
+									<a href="">Адреса магазинов</a>
+								</li>
+								<li>
+									<a href="">Гарантия</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__middle middle-footer">
+				<div class="middle-footer__container">
+					<div class="middle-footer__wrapper">
+						<div class="middle-footer__col">
+							<a href="/" class="middle-footer__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+							<div class="middle-footer__social social">
+								<a href="" class="social__item">
+									<img class="ibg" src="img/icons/social/dzen.webp" alt="Image">
+								</a>
+								<a href="" class="social__item">
+									<img class="ibg" src="img/icons/social/vk.webp" alt="Image">
+								</a>
+							</div>
+						</div>
+						<div class="middle-footer__col">
+							<ul class="middle-footer__documents">
+								<li><a href="">Политика конфиденциальности</a></li>
+								<li><a href="">Условия обработки заявок/заказов</a></li>
+								<li><a href="">Оферта для пользователей</a></li>
+								<li><a href="">Условия проведения акций</a></li>
+							</ul>
+						</div>
+						<div class="middle-footer__col ">
+							<div class="top-footer__menu">
+								<ul>
+									<li><a href="">Кабинет партнера</a></li>
+									<li><a href="">AridaCloud</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="middle-footer__developer">
+						Сайт разработан: <a href="" target="_blank">Like<span>IT</span>.pro</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="footer__copy copy-footer">
+				<div class="copy-footer__container">
+					<div class="copy-footer__text">
+						<p>© 2025 Общество с ограниченной ответственностью Фабрика "Моя Мебель".
+						</p>
+						<p>Все права защинены. ИНН 2636218408</p>
+					</div>
+					<div class="copy-footer__text copy-footer__text_light">
+						<p>
+							Все ресурсы сайта aridamebel.ru, включая (но не ограничиваясь) текстовую, графическую,
+							фотографическую и
+							видео информацию, структуру, дизайн и оформление страниц, товарные знаки, доменное имя, фирменное
+							наименование являются объектами авторского права и прав на интеллектуальную собственность, защищены
+							российским законодательством и международными соглашениями об охране авторских прав и
+							интеллектуальной
+							собственности.
+						</p>
+						<p>
+							Запрещается любое воспроизведение, в том числе использование, копирование, включение содержания
+							страниц
+							данного сайта и иных объектов в структуру других сайтов без предварительного согласия
+							правообладателя.
+							Запрещаются любые иные действия, в результате которых у пользователей Интернета может сложиться
+							впечатление, что представленные материалы не имеют отношения к домену aridamebel.ru.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="menu-fix">
+			<ul class="menu-fix__list">
+				<li class="menu-fix__item"><a href="/">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#home"></use>
+						</svg>
+						Главная
+					</a></li>
+				<li class="menu-fix__item"><a href="">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#catalog"></use>
+						</svg>
+						Каталог
+					</a></li>
+				<li class="menu-fix__item"><a href="">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#cart"></use>
+						</svg>
+						Корзина
+						<span class="cart-counter js-cart">14</span>
+					</a></li>
+				<li class="menu-fix__item"><a href="">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#fav"></use>
+						</svg>
+						Избранное
+						<span class="cart-counter js-favorite">14</span>
+					</a></li>
+				<li class="menu-fix__item"><a href="#" data-opener data-popup="pop-log">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#user"></use>
+						</svg>
+						Профиль
+					</a></li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="cart-notification cart-notification_success">
+		<button class="cart-notification__del" type="button">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#close"></use>
+			</svg>
+		</button>
+		<div class="cart-notification__img">
+			<img src="img/main/products/01.webp" alt="Image">
+		</div>
+		<div class="cart-notification__body">
+			<div class="cart-notification__title">Спальня "Верона" (Кровать 1,8; 2 тумбы; Комод с зеркалом; Шкаф 5 дверный) </div>
+			<div class="cart-notification__price">
+				<div class="cart-notification__price-cur">11 990 ₽</div>
+				<del class="cart-notification__price-old">13 990 ₽</del>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Модалка search-->
+	<div class="modal modal_search" id="pop_search">
+		<div class="modal__inner">
+			<div class="modal__body">
+				<button class="modal__close" type="button"><svg>
+						<use href="img/icons/icons.svg#close"></use>
+					</svg></button>
+				<div class="modal__search search-popup">
+					<div class="search-popup__container">
+						<div class="search-popup__search">
+							<form action="#">
+								<div class="search-box">
+									<input class="input search-box__input" autocomplete="off" type="text" name="form[]" placeholder="Поиск">
+									<button class="search-box__btn" type="submit">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#search"></use>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+						<!-- активация списка поиска _search-active-->
+						<div class="search-popup__list _search-active">
+							<div class="product">
+								<a class="stretched-link" href=""></a>
+								<div class="product__wrapper">
+									<div class="product__images">
+										<div class="product__images-body swiper">
+											<div class="swiper-wrapper">
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/01.webp" alt="Image" class="ibg">
+												</div>
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/01.webp" alt="Image" class="ibg">
+												</div>
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/02.webp" alt="Image" class="ibg">
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<div class="product__beiges">
+											<div class="product__beige product__beige_new">Новинка</div>
+											<div class="product__beige product__beige_sale">-10%</div>
+										</div>
+										<button class="product__fav" type="button">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#fav"></use>
+											</svg>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#fav_full"></use>
+											</svg>
+										</button>
+										<a href="" class="product__try button button_black">
+											<svg class="button__icon-cube">
+												<use xlink:href="img/icons/icons.svg#cube"></use>
+											</svg>
+											Примерить онлайн
+										</a>
+									</div>
+									<div class="product__title">
+										Спальня "Верона" (Кровать 1,8; 2 тумбы; Комод с зеркалом; Шкаф 5 дверный)
+									</div>
+									<div class="product__footer">
+										<div class="product__footer-inner">
+											<div class="product__price">
+												<div class="product__price-current">110 990 ₽</div>
+												<del class="product__price-old">130 990 ₽</del>
+											</div>
+											<div class="product__actions _qty-noactive">
+												<button class="product__btn button button_light" type="button">
+													<svg class="button__icon button__icon-cart">
+														<use xlink:href="img/icons/icons.svg#cart"></use>
+													</svg>
+													В корзину
+												</button>
+												<div class="quantity" data-quantity="">
+													<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+													<div class="quantity__input"><input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+													</div>
+													<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												</div>
+											</div>
+										</div>
+										<div class="product__parameters">
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Колекция:</div>
+												<div class="item-parameter__value"><a href="">Леонардо</a></div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">
+													Цвет:
+												</div>
+												<div class="item-parameter__value item-parameter__value_colors">
+													<img src="img/main/products/product-color/01.svg" alt="Image">
+													<img src="img/main/products/product-color/02.svg" alt="Image">
+												</div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												Крем, Золото, Бронза, Шенилл-букле молочный
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Вес:</div>
+												<div class="item-parameter__value"><u>514 кг</u></div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Обьем:</div>
+												<div class="item-parameter__value"><u>1,7 куб.м</u></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product">
+								<a class="stretched-link" href=""></a>
+								<div class="product__wrapper">
+									<div class="product__images">
+										<div class="product__images-body swiper">
+											<div class="swiper-wrapper">
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/01.webp" alt="Image" class="ibg">
+												</div>
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/01.webp" alt="Image" class="ibg">
+												</div>
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/02.webp" alt="Image" class="ibg">
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<div class="product__beiges">
+											<div class="product__beige product__beige_new">Новинка</div>
+											<div class="product__beige product__beige_sale">-10%</div>
+										</div>
+										<button class="product__fav" type="button">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#fav"></use>
+											</svg>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#fav_full"></use>
+											</svg>
+										</button>
+										<a href="" class="product__try button button_black">
+											<svg class="button__icon-cube">
+												<use xlink:href="img/icons/icons.svg#cube"></use>
+											</svg>
+											Примерить онлайн
+										</a>
+									</div>
+									<div class="product__title">
+										Спальня "Верона" (Кровать 1,8; 2 тумбы; Комод с зеркалом; Шкаф 5 дверный)
+									</div>
+									<div class="product__footer">
+										<div class="product__footer-inner">
+											<div class="product__price">
+												<div class="product__price-current">110 990 ₽</div>
+												<del class="product__price-old">130 990 ₽</del>
+											</div>
+											<div class="product__actions _qty-noactive">
+												<button class="product__btn button button_light" type="button">
+													<svg class="button__icon button__icon-cart">
+														<use xlink:href="img/icons/icons.svg#cart"></use>
+													</svg>
+													В корзину
+												</button>
+												<div class="quantity" data-quantity="">
+													<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+													<div class="quantity__input"><input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+													</div>
+													<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												</div>
+											</div>
+										</div>
+										<div class="product__parameters">
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Колекция:</div>
+												<div class="item-parameter__value"><a href="">Леонардо</a></div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">
+													Цвет:
+												</div>
+												<div class="item-parameter__value item-parameter__value_colors">
+													<img src="img/main/products/product-color/01.svg" alt="Image">
+													<img src="img/main/products/product-color/02.svg" alt="Image">
+												</div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												Крем, Золото, Бронза, Шенилл-букле молочный
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Вес:</div>
+												<div class="item-parameter__value"><u>514 кг</u></div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Обьем:</div>
+												<div class="item-parameter__value"><u>1,7 куб.м</u></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product">
+								<a class="stretched-link" href=""></a>
+								<div class="product__wrapper">
+									<div class="product__images">
+										<div class="product__images-body swiper">
+											<div class="swiper-wrapper">
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/01.webp" alt="Image" class="ibg">
+												</div>
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/01.webp" alt="Image" class="ibg">
+												</div>
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/02.webp" alt="Image" class="ibg">
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<div class="product__beiges">
+											<div class="product__beige product__beige_new">Новинка</div>
+											<div class="product__beige product__beige_sale">-10%</div>
+										</div>
+										<button class="product__fav" type="button">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#fav"></use>
+											</svg>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#fav_full"></use>
+											</svg>
+										</button>
+										<a href="" class="product__try button button_black">
+											<svg class="button__icon-cube">
+												<use xlink:href="img/icons/icons.svg#cube"></use>
+											</svg>
+											Примерить онлайн
+										</a>
+									</div>
+									<div class="product__title">
+										Спальня "Верона" (Кровать 1,8; 2 тумбы; Комод с зеркалом; Шкаф 5 дверный)
+									</div>
+									<div class="product__footer">
+										<div class="product__footer-inner">
+											<div class="product__price">
+												<div class="product__price-current">110 990 ₽</div>
+												<del class="product__price-old">130 990 ₽</del>
+											</div>
+											<div class="product__actions _qty-noactive">
+												<button class="product__btn button button_light" type="button">
+													<svg class="button__icon button__icon-cart">
+														<use xlink:href="img/icons/icons.svg#cart"></use>
+													</svg>
+													В корзину
+												</button>
+												<div class="quantity" data-quantity="">
+													<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+													<div class="quantity__input"><input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+													</div>
+													<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												</div>
+											</div>
+										</div>
+										<div class="product__parameters">
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Колекция:</div>
+												<div class="item-parameter__value"><a href="">Леонардо</a></div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">
+													Цвет:
+												</div>
+												<div class="item-parameter__value item-parameter__value_colors">
+													<img src="img/main/products/product-color/01.svg" alt="Image">
+													<img src="img/main/products/product-color/02.svg" alt="Image">
+												</div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												Крем, Золото, Бронза, Шенилл-букле молочный
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Вес:</div>
+												<div class="item-parameter__value"><u>514 кг</u></div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Обьем:</div>
+												<div class="item-parameter__value"><u>1,7 куб.м</u></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product">
+								<a class="stretched-link" href=""></a>
+								<div class="product__wrapper">
+									<div class="product__images">
+										<div class="product__images-body swiper">
+											<div class="swiper-wrapper">
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/01.webp" alt="Image" class="ibg">
+												</div>
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/01.webp" alt="Image" class="ibg">
+												</div>
+												<div class="product__img swiper-slide">
+													<img src="img/main/products/02.webp" alt="Image" class="ibg">
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<div class="product__beiges">
+											<div class="product__beige product__beige_new">Новинка</div>
+											<div class="product__beige product__beige_sale">-10%</div>
+										</div>
+										<button class="product__fav" type="button">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#fav"></use>
+											</svg>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#fav_full"></use>
+											</svg>
+										</button>
+										<a href="" class="product__try button button_black">
+											<svg class="button__icon-cube">
+												<use xlink:href="img/icons/icons.svg#cube"></use>
+											</svg>
+											Примерить онлайн
+										</a>
+									</div>
+									<div class="product__title">
+										Спальня "Верона" (Кровать 1,8; 2 тумбы; Комод с зеркалом; Шкаф 5 дверный)
+									</div>
+									<div class="product__footer">
+										<div class="product__footer-inner">
+											<div class="product__price">
+												<div class="product__price-current">110 990 ₽</div>
+												<del class="product__price-old">130 990 ₽</del>
+											</div>
+											<div class="product__actions _qty-noactive">
+												<button class="product__btn button button_light" type="button">
+													<svg class="button__icon button__icon-cart">
+														<use xlink:href="img/icons/icons.svg#cart"></use>
+													</svg>
+													В корзину
+												</button>
+												<div class="quantity" data-quantity="">
+													<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+													<div class="quantity__input"><input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+													</div>
+													<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												</div>
+											</div>
+										</div>
+										<div class="product__parameters">
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Колекция:</div>
+												<div class="item-parameter__value"><a href="">Леонардо</a></div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">
+													Цвет:
+												</div>
+												<div class="item-parameter__value item-parameter__value_colors">
+													<img src="img/main/products/product-color/01.svg" alt="Image">
+													<img src="img/main/products/product-color/02.svg" alt="Image">
+												</div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												Крем, Золото, Бронза, Шенилл-букле молочный
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Вес:</div>
+												<div class="item-parameter__value"><u>514 кг</u></div>
+											</div>
+											<div class="product__parameters-item item-parameter">
+												<div class="item-parameter__label">Обьем:</div>
+												<div class="item-parameter__value"><u>1,7 куб.м</u></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--end  -->
+						<a href class="search-popup__more button button_more">Смотреть все результаты </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Модалка search-->
+	<div class="modal modal_address" id="pop_address">
+		<div class="modal__inner">
+			<div class="modal__body">
+				<div class="modal__container">
+					<div class="modal__address address-popup">
+						<div class="address-popup__top">
+							<div class="address-popup__current">
+								<svg class="address-popup__current-icon">
+									<use xlink:href="img/icons/icons.svg#bookmark"></use>
+								</svg>
+								<strong class="address-popup__current-text">Выбрать регион:</strong>
+								<u class="address-popup__current-city">Москва</u>
+							</div>
+							<button class="modal__close" type="button"><svg>
+									<use href="img/icons/icons.svg#close"></use>
+								</svg></button>
+						</div>
+						<div class="address-popup__search">
+							<form action="#">
+								<div class="search-box">
+									<input class="input search-box__input" autocomplete="off" type="text" name="form[]" placeholder="Поиск вашего города">
+									<button class="search-box__btn" type="submit">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#search"></use>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div data-showmore="items" class="address-popup__content popup-cities">
+							<ul data-showmore-content="6" class="popup-cities__list">
+								<li>
+									<a href="">Майкоп</a>
+								</li>
+								<li>
+									<a href="">Адыгейск</a>
+								</li>
+								<li>
+									<a href="">Элиста</a>
+								</li>
+								<li>
+									<a href="">Городовиковск</a>
+								</li>
+								<li>
+									<a href="">Лагань</a>
+								</li>
+								<li>
+									<a href="">Абинск</a>
+								</li>
+								<li>
+									<a href="">Анапа</a>
+								</li>
+								<li>
+									<a href="">Апшеронск</a>
+								</li>
+								<li>
+									<a href="">Армавир</a>
+								</li>
+								<li>
+									<a href="">Белореченск</a>
+								</li>
+								<li><a href="">Новокубанск</a></li>
+								<li><a href="">Новороссийск</a></li>
+								<li><a href=""> Приморско-Ахтарск</a></li>
+								<li><a href="">Славянск-на-Кубани</a></li>
+								<li><a href="">Сочи</a></li>
+								<li><a href="">Темрюк</a></li>
+								<li><a href="">Тихорецк</a></li>
+								<li><a href="">Туапсе</a></li>
+								<li><a href="">Усть-Лабинск</a></li>
+								<li><a href="">Хадыженск</a></li>
+								<li><a href="">Жирновск</a></li>
+								<li><a href="">Калач-на-Дону</a></li>
+								<li><a href="">Камышин</a></li>
+								<li><a href="">Котельниково</a></li>
+								<li><a href="">Котово</a></li>
+								<li><a href="">Ленинск</a></li>
+								<li><a href="">Михайловка</a></li>
+								<li><a href="">Николаевск</a></li>
+								<li><a href="">Новоаннинский</a></li>
+								<li><a href="">Палласовка</a></li>
+								<li><a href="">Серафимович</a></li>
+								<li><a href="">Урюпинск</a></li>
+								<li><a href="">Фролово</a></li>
+								<li><a href="">Азов</a></li>
+								<li><a href="">Аксай</a></li>
+								<li><a href="">Батайск</a></li>
+								<li><a href="">Белая Калитва</a></li>
+								<li><a href="">Волгодонск</a></li>
+								<li><a href="">Гуково</a></li>
+								<li><a href="">Миллерово</a></li>
+								<li><a href="">Морозовск</a></li>
+								<li><a href="">Новочеркасск</a></li>
+								<li><a href="">Новошахтинск</a></li>
+								<li><a href="">Пролетарск</a></li>
+								<li><a href="">Ростов-на-Дону</a></li>
+								<li><a href="">Сальск</a></li>
+								<li><a href="">Семикаракорск</a></li>
+								<li><a href="">Таганрог</a></li>
+								<li><a href="">Цимлянск</a></li>
+								<li><a href="">Новокубанск</a></li>
+								<li><a href="">Новороссийск</a></li>
+								<li><a href="">Приморско-Ахтарск</a></li>
+								<li><a href="">Славянск-на-Кубани</a></li>
+								<li><a href="">Сочи</a></li>
+								<li><a href="">Темрюк</a></li>
+								<li><a href="">Тихорецк</a></li>
+								<li><a href="">Туапсе</a></li>
+								<li><a href="">Усть-Лабинск</a></li>
+								<li><a href="">Хадыженск</a></li>
+							</ul>
+							<button hidden data-showmore-button type="button" class="popup-cities__btn button button_more">
+								<span>Показать еще</span><span>Скрыть</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Модалка catalog-->
+	<div class="modal modal_catalog" id="pop_catalog">
+		<div class="modal__inner">
+			<div class="modal__body">
+				<div class="modal__container">
+					<div class="modal__catalog catalog-wrapper">
+						<ul class="catalog-wrapper__content catalog-menu">
+							<li class="catalog-menu__item">
+								<a href="" class="catalog-menu__link catalog-menu__link-title">Кухни</a>
+								<a href="" class="catalog-menu__link">Кухонные наборы</a>
+								<a href="" class="catalog-menu__link">Кухни</a>
+								<a href="" class="catalog-menu__link">Кухонные острова</a>
+								<a href="" class="catalog-menu__link">Кухонные пеналы</a>
+							</li>
+							<li class="catalog-menu__item">
+								<a href="" class="catalog-menu__link catalog-menu__link-title">Для спальни</a>
+								<a href="" class="catalog-menu__link">Комплекты для спальни</a>
+								<a href="" class="catalog-menu__link">Кровати</a>
+								<a href="" class="catalog-menu__link">Шкафы</a>
+								<a href="" class="catalog-menu__link">Комоды</a>
+								<a href="" class="catalog-menu__link">Туалетные столы</a>
+								<a href="" class="catalog-menu__link">Прикроватные тумбы</a>
+								<a href="" class="catalog-menu__link">Зеркала</a>
+							</li>
+							<li class="catalog-menu__item">
+								<a href="" class="catalog-menu__link catalog-menu__link-title">Столы и стулья</a>
+								<a href="" class="catalog-menu__link">Комплекты столов и стульев</a>
+								<a href="" class="catalog-menu__link">Столы</a>
+								<a href="" class="catalog-menu__link">Стулья</a>
+								<a href="" class="catalog-menu__link">Журнальные столики</a>
+							</li>
+							<li class="catalog-menu__item">
+								<a href="" class="catalog-menu__link catalog-menu__link-title">Дизайнерские решения</a>
+								<a href="" class="catalog-menu__link">Интерьерные кровати</a>
+							</li>
+							<li class="catalog-menu__item">
+								<a href="" class="catalog-menu__link catalog-menu__link-title">Для гостинной</a>
+								<a href="" class="catalog-menu__link">Комплекты для гостиной</a>
+								<a href="" class="catalog-menu__link">Пеналы</a>
+								<a href="" class="catalog-menu__link">Витрины</a>
+								<a href="" class="catalog-menu__link">Тумбы под телевизор</a>
+								<a href="" class="catalog-menu__link">Комоды с зеркалами</a>
+							</li>
+							<li class="catalog-menu__item">
+								<a href="" class="catalog-menu__link catalog-menu__link-title">Мягкая мебель</a>
+								<a href="" class="catalog-menu__link">Комплекты мягкой мебели</a>
+								<a href="" class="catalog-menu__link">Кресла</a>
+								<a href="" class="catalog-menu__link">Диваны</a>
+							</li>
+							<li class="catalog-menu__item">
+								<a href="" class="catalog-menu__link catalog-menu__link-title">Шкафы-купе</a>
+								<a href="" class="catalog-menu__link">2-створчатые</a>
+								<a href="" class="catalog-menu__link">3-створчатые</a>
+							</li>
+						</ul>
+						<div class="catalog-wrapper__img">
+							<img src="img/header/menu-img.webp" alt="Image" class="ibg">
+							<div class="catalog-wrapper__img-content">
+								<strong>Экосистема <br>
+									домашнего уюта</strong>
+								<small>
+									Готовые решения <br> для&nbsp;вашего дома
+								</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--при открытом состоянии добавляется класс popup-opened-->
+	<div class="popup " id="pop-log">
+		<div class="popup__overlay"></div>
+		<div class="popup__box">
+			<div class="popup__header">
+				<div class="popup__title">Войти</div>
+				<button class="popup__close">
+					<svg class="popup__close-icon">
+						<use xlink:href="img/icons/icons.svg#close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="popup__authorization">
+				<div class="popup__authorization-text">Введите свой e-mail и&nbsp;пароль для&nbsp;входя
+					в&nbsp;личный кабинет
+				</div>
+				<div class="popup__authorization-form">
+					<form action="" class="form">
+						<div class="form__row">
+							<input class="form__input input" autocomplete="off" type="email" name="form[]" placeholder="E-mail">
+						</div>
+						<div class="form__row">
+							<input class="form__input input" autocomplete="off" type="password" name="form[]" placeholder="Пароль ">
+						</div>
+						<div class="form__row">
+							<button class="form__link" data-opener data-popup="pop-authorization" type="button">Забыли свой пароль?</button>
+						</div>
+						<div class="form__row">
+							<button class="button button_black button_fw" type="submit">Войти</button>
+						</div>
+					</form>
+				</div>
+				<div class="popup__authorization-action">
+					<button class="button button_outline button_fw" type="button" data-opener data-popup="pop-sign-up">Зарегистрироваться</button>
+					<div class="popup__authorization-text">
+						<small> Регистрируясь на <span>Aridamebel.ru</span> или авторизуясь, вы соглашаетесь с <a href="">пользовательским
+								соглашением</a> и <a href="">политикой конфиденциальности</a>.</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--при открытом состоянии добавляется класс popup-opened-->
+	<div class="popup" id="pop-sign-up">
+		<div class="popup__overlay"></div>
+		<div class="popup__box">
+			<div class="popup__header">
+				<div class="popup__title">Впервые у нас? <br>
+					Давайте знакомиться</div>
+				<button class="popup__close">
+					<svg class="popup__close-icon">
+						<use xlink:href="img/icons/icons.svg#close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="popup__authorization">
+				<div class="popup__authorization-text">Введите свой e-mail и&nbsp;пароль для&nbsp;входя
+					в&nbsp;личный кабинет
+				</div>
+				<div class="popup__authorization-form">
+					<form action="" class="form">
+						<div class="form__row">
+							<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя">
+						</div>
+						<div class="form__row">
+							<input class="form__input input" autocomplete="off" type="email" name="form[]" placeholder="E-mail">
+						</div>
+						<div class="form__row">
+							<button class="button button_black button_fw" type="submit">Готово</button>
+						</div>
+					</form>
+				</div>
+				<div class="popup__authorization-action">
+					<div class="popup__authorization-text">
+						<small> Регистрируясь на <span>Aridamebel.ru</span> или авторизуясь, вы соглашаетесь с <a href="">пользовательским
+								соглашением</a> и <a href="">политикой конфиденциальности</a>.</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--при открытом состоянии добавляется класс popup-opened-->
+	<div class="popup " id="pop-authorization">
+		<div class="popup__overlay"></div>
+		<div class="popup__box">
+			<div class="popup__header">
+				<div class="popup__title">Войти или <br> зарегистрироваться</div>
+				<button class="popup__close">
+					<svg class="popup__close-icon">
+						<use xlink:href="img/icons/icons.svg#close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="popup__authorization">
+				<div class="popup__authorization-text">
+					Мы отправим SMS-сообщение с&nbsp;кодом подтверждения
+				</div>
+				<div class="popup__authorization-form">
+					<form action="" class="form">
+						<div class="form__row">
+							<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="Телефон">
+						</div>
+						<div class="form__row form__row_authorization">
+							<input class="form__input input js-input_auth" required type="text" inputmode="numeric" maxlength="1" placeholder="-" autocomplete="one-time-code">
+
+							<input class="form__input input js-input_auth" required type="text" inputmode="numeric" maxlength="1" placeholder="-" autocomplete="one-time-code">
+
+							<input class="form__input input js-input_auth" required type="text" inputmode="numeric" maxlength="1" placeholder="-" autocomplete="one-time-code">
+
+							<input class="form__input input js-input_auth" required type="text" inputmode="numeric" maxlength="1" placeholder="-" autocomplete="one-time-code">
+						</div>
+						<div class="form__row">
+							<button class="form__button button button_black button_fw js-phone-authorization" type="button">Получить код подтверждения</button>
+						</div>
+					</form>
+				</div>
+				<div class="popup__authorization-action">
+					<div class="popup__authorization-text">
+						<small> Регистрируясь на <span>Aridamebel.ru</span> или авторизуясь, вы соглашаетесь с <a href="">пользовательским
+								соглашением</a> и <a href="">политикой конфиденциальности</a>.</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/common.js?_v=1"></script>
+	<script src="js/header.js?_v=1"></script>
+	<script src="js/swiper.js?_v=1"></script>
+	<script src="js/modal.js?_v=1"></script>
+	<script src="js/popup.js?_v=1"></script>
+	<script src="js/showmore.js?_v=1"></script>
+	<script src="js/phone-auth.js?_v=1"></script>
+	<script src="js/counter.js?_v=1"></script>
+	<script src="js/product.js?_v=1"></script>
+	<script src="js/notification.js?_v=1"></script>
+	<script src="js/catalog.js?_v=1"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+.timer {
+    padding: .625rem;
+    border-radius: .625rem;
+    background-color: var(--white)
+}
+.timer.sale-det__timer {
+    background-color: rgba(0,0,0,0);
+    padding: 0
+}
+.timer__title {
+    font-size: .625rem;
+    font-weight: 600;
+    margin-bottom: .5rem
+}
+.sale-det__timer .timer__title {
+    font-size: .875rem;
+    margin-bottom: .75rem
+}
+.timer__body {
+    display: flex;
+    align-items: flex-end;
+    gap: .625rem
+}
+.timer__item {
+    display: flex;
+    flex-direction: column;
+    gap: .1875rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500
+}
+.timer__item-text {
+    color: var(--secondary);
+    font-size: .5625rem
+}
+.sale-det__timer .timer__item-text {
+    font-size: .6875rem
+}
+.timer__item-num {
+    font-size: .75rem;
+    width: 1.5625rem;
+    height: 1.875rem;
+    border-radius: .3125rem;
+    background-color: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.sale-det__timer .timer__item-num {
+    font-size: .875rem;
+    width: 2.4375rem;
+    height: 2.625rem
+}
+.timer__sep {
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding-bottom: .375rem
+}
+.sale-det__timer .timer__sep {
+    padding-bottom: .75rem
+}

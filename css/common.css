@@ -385,6 +385,17 @@ body.no-scroll {
 .section_inner .section__title {
     margin-bottom: 1.875rem
 }
+.section__block {
+    margin-bottom: 1.875rem
+}
+.section__text {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4
+}
+.section__text p+p {
+    margin-top: 1rem
+}
 .section.section_bottom {
     padding-top: 0;
     padding-bottom: 6.25rem
@@ -496,6 +507,16 @@ body.no-scroll {
     }
     .section_inner .section__title {
         margin-bottom: 1.25rem
+    }
+    .section__block {
+        margin-bottom: 1.25rem
+    }
+    .section__text {
+        font-size: .875rem
+    }
+    .section__text p+p {
+        font-size: .875rem;
+        margin-top: .75rem
     }
     .section.section_bottom {
         padding-top: 0;

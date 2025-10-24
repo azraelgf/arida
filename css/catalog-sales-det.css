@@ -1,0 +1,165 @@
+.sale-det__wrapper {
+    display: flex;
+    border-radius: .625rem;
+    overflow: hidden;
+    min-height: 17.25rem;
+    position: relative;
+    margin-bottom: 2.5rem
+}
+.sale-det__img {
+    flex: 0 0 66%
+}
+.sale-det__img img {
+    border-radius: .625rem
+}
+.sale-det__beiges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5625rem
+}
+.sale-det__beiges-item {
+    color: var(--white);
+    font-weight: 600;
+    font-size: .75rem;
+    padding: .5625rem .75rem;
+    border-radius: 6.25rem;
+    background-color: var(--red)
+}
+.sale-det__beiges-item._date {
+    color: var(--primary);
+    background-color: var(--bg-accent)
+}
+.sale-det__content {
+    flex: 1 1 auto;
+    background-color: var(--bg-inverse);
+    display: flex;
+    align-items: center
+}
+.sale-det__content-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: .8125rem
+}
+.sale-det__content-block {
+    position: relative;
+    z-index: 2
+}
+.sale-det__text {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1.875rem
+}
+.sale-det__text p+p {
+    margin-top: 1rem
+}
+.sale-det__text ul {
+    padding-left: 1.25rem;
+    line-height: 1.2;
+    margin: 1rem 0
+}
+.sale-det__text ul li+li {
+    margin-top: .1875rem
+}
+.sale-det__text ul li {
+    list-style: disc
+}
+@media (min-width:29.99875em) {
+    .sale-det__btn {
+        min-width: 16.25rem
+    }
+}
+@media (min-width:61.99875em) {
+    .sale-det__wrapper::before {
+        content: "";
+        position: absolute;
+        width: 42.5rem;
+        height: 42.5rem;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        background-color: var(--bg-inverse);
+        translate: -120% -40%
+    }
+    .sale-det__wrapper::after {
+        content: "";
+        position: absolute;
+        width: 30.8125rem;
+        height: 30.8125rem;
+        top: 9.0625rem;
+        border-radius: 100%;
+        background-color: var(--bg-accent);
+        right: 92%
+    }
+    .sale-det__beiges {
+        margin-bottom: 1.25rem
+    }
+    .sale-det__content {
+        padding: 3.125rem 2.5rem
+    }
+    .sale-det__content-title {
+        max-width: 26.25rem
+    }
+}
+@media (max-width:74.99875em) {
+    .sale-det__img {
+        flex: 0 0 60%
+    }
+}
+@media (max-width:61.99875em) {
+    .sale-det__wrapper {
+        flex-direction: column;
+        gap: 2.5rem
+    }
+    .sale-det__img {
+        order: -1;
+        flex: 1 1 100%
+    }
+    .sale-det__timer {
+        display: none
+    }
+    .sale-det__beiges-item {
+        display: none
+    }
+    .sale-det__beiges-item._date {
+        display: block;
+        padding: .875rem 1.375rem;
+        background-color: var(--bg-inverse)
+    }
+    .sale-det__content {
+        background-color: rgba(0,0,0,0)
+    }
+    .sale-det__content-title {
+        order: -1
+    }
+    .sale-det__content-block {
+        display: flex;
+        flex-direction: column
+    }
+}
+@media (max-width:29.99875em) {
+    .sale-det__wrapper {
+        margin-bottom: 1.25rem
+    }
+    .sale-det__wrapper {
+        min-height: 12.5rem
+    }
+    .sale-det__text {
+        font-size: .875rem
+    }
+    .sale-det__text p+p {
+        margin-top: .75rem
+    }
+    .sale-det__text ul {
+        margin: .75rem 0
+    }
+}
+@media (min-width:61.99875em)and (max-width:96em) {
+    .sale-det__wrapper::before {
+        translate: -115% -40%
+    }
+}
+@media (min-width:61.99875em)and (max-width:74.99875em) {
+    .sale-det__wrapper::before {
+        translate: -100% -50%
+    }
+}

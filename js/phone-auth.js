@@ -1,17 +1,22 @@
 (() => {
     "use strict";
-    document.addEventListener("click", e => {
-        const btn = e.target.closest(".js-phone-authorization");
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.js-phone-authorization');
         if (!btn) return;
-        const form = btn.closest(".form");
-        const authRow = form?.querySelector(".form__row_authorization");
-        if (authRow?.classList.contains("_active")) {
-            form.submit();
+
+        const form = btn.closest('.form');
+        const authRow = form?.querySelector('.form__row_authorization');
+
+        // если форма уже активна — значит, теперь нужно отправлять
+        if (authRow?.classList.contains('_active')) {
+            form.submit(); // можно заменить на свою AJAX-отправку
             return;
         }
-        authRow?.classList.add("_active");
-        btn.textContent = "Войти";
-        btn.type = "submit";
+
+        // иначе показываем поля и меняем кнопку
+        authRow?.classList.add('_active');
+        btn.textContent = 'Войти';
+        btn.type = 'submit'; // теперь кнопка отправляет форму
     });
 
     //ввод чисел для аторизации

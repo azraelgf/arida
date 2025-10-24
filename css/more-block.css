@@ -1,0 +1,16 @@
+.more-block {
+    margin-top: 1.25rem;
+    display: grid;
+    gap: 2.5rem;
+    justify-items: center
+}
+@media (max-width:61.99875em) {
+    .more-block {
+        margin-top: 1.875rem
+    }
+}
+@media (max-width:47.99875em) {
+    .more-block {
+        gap: 1.625rem
+    }
+}
