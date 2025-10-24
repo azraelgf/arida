@@ -166,6 +166,9 @@
         min-width: 9.375rem;
         flex: 1 1 50%
     }
+    .navigation-filter {
+        -webkit-overflow-scrolling: touch
+    }
 }
 @media (max-width:22.5em) {
     .catalog__title {
