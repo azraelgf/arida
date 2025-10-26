@@ -38,8 +38,8 @@
     border: 1px solid transparent;
     transition: border-color .3s ease-in-out
 }
-.options__label-color span {
-    width: .4375rem
+.options__label-color img {
+    border-radius: .125rem
 }
 .options__label:before {
     content: "";

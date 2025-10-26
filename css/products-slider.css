@@ -1,0 +1,38 @@
+
+.slider {
+    position: relative;
+}
+.products {
+    padding-bottom: 3.75rem
+}
+.products__slider {
+    position: relative;
+    z-index: 2
+}
+.products__slider.swiper {
+    overflow: visible
+}
+.products__slider::after,
+.products__slider::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    background-color: var(--white)
+}
+.products__slider::after {
+    left: calc(100% + .625rem)
+}
+.products__slider::before {
+    right: calc(100% + .625rem)
+}
+@media (max-width:29.99875em) {
+    .products {
+        padding-bottom: 2.5rem
+    }
+    .products__wrapper {
+        margin-bottom: 1.875rem
+    }
+}

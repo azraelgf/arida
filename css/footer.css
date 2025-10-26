@@ -284,6 +284,9 @@
     .footer {
         padding-bottom: 6.25rem
     }
+    .footer.footer_fix {
+        padding-bottom: 12.5rem
+    }
     .footer__top {
         margin-bottom: 1.875rem
     }

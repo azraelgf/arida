@@ -6,6 +6,7 @@
     background-color: var(--bg-primary);
     transition: all .3s ease-in-out
 }
+.product-info__actions .quantity,
 .product__actions .quantity {
     width: 100%;
     position: absolute;
@@ -59,6 +60,11 @@
 @media (max-width:61.99875em) {
     .catalog-items .quantity {
         height: 2.5rem
+    }
+}
+@media (max-width:47.99875em) {
+    .product-info__fix .quantity {
+        height: 2.25rem
     }
 }
 @media (max-width:22.5em) {

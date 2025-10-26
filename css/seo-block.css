@@ -13,14 +13,15 @@
     font-weight: 600
 }
 .seo-block__intro {
+    transition: margin .3s ease-in-out
+}
+._showmore-active .seo-block__intro {
     margin-bottom: 1rem
 }
 .seo-block__more {
     font-weight: 600;
     text-decoration: underline;
-    transition: margin-top .3s ease-in-out,color .3s ease-in-out
-}
-._showmore-active .seo-block__more {
+    transition: color .3s ease-in-out;
     margin-top: 1rem
 }
 @media (max-width:47.99875em) {
@@ -33,7 +34,7 @@
         font-size: .875rem;
         line-height: 1.5
     }
-    .seo-block__intro {
+    ._showmore-active .seo-block__intro {
         margin-bottom: .75rem
     }
 }
