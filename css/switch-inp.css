@@ -1,60 +1,58 @@
-.pagging {
-    display: flex;
+.switch {
+    display: inline-flex;
     align-items: center;
-    gap: 1rem;
-    justify-content: center
+    gap: .6em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
 }
-.pagging__arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.75rem;
-    height: 1.75rem
+.switch__input {
+    display: none
 }
-.pagging__arrow svg {
-    width: .75rem;
-    height: .75rem
+.switch__input:checked+.switch__slider::before {
+    -webkit-transform: translateX(16px);
+    transform: translateX(16px);
+    background-color: #f1eff2
 }
-.pagging__arrow_left {
-    rotate: -90deg
+.switch__input:checked+.switch__slider {
+    background-color: var(--primary)
 }
-.pagging__arrow_right {
-    rotate: 90deg
+.switch__input:focus-visible+.switch__slider {
+    box-shadow: 0 0 0 3px rgba(76,175,80,.4)
 }
-.pagging__list {
-    display: flex;
-    gap: .5rem
+.switch__slider {
+    position: relative;
+    width: 35px;
+    height: 20px;
+    background-color: #f1eff2;
+    border-radius: 12px;
+    transition: background-color .3s;
+    flex-shrink: 0
 }
-.pagging__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    width: 1.75rem;
-    height: 1.75rem;
-    border-radius: .5rem;
-    transition: background-color .3s ease-in-out
+.switch__slider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    translate: 0 -50%;
+    background-color: var(--primary);
+    border-radius: 50%;
+    transition: background-color .3s,-webkit-transform .3s;
+    transition: transform .3s,background-color .3s;
+    transition: transform .3s,background-color .3s,-webkit-transform .3s
 }
-.pagging__item._active {
-    background-color: var(--bg-accent);
-    color: var(--white)
+.switch__label {
+    font-size: 16px;
+    color: var(--primary)
 }
-
-@media (max-width:29.99875em) {
-    .pagging {
-        width: 100%
-    }
-    .pagging__arrow {
-        width: 1.375rem
-    }
-    .pagging__list {
-        flex: 1 1 auto;
-        justify-content: space-between
-    }
+.switch__label strong {
+    font-weight: 600
 }
-@media (any-hover:hover) {
-    .pagging__item:hover {
-        background-color: var(--bg-accent);
-        color: var(--white)
+@media (max-width:47.99875em) {
+    .switch__label {
+        font-size: .875rem
     }
 }

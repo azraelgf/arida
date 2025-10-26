@@ -275,6 +275,9 @@ body.no-scroll {
     font-weight: 600;
     line-height: 1.2
 }
+.red-text {
+    color: var(--red)
+}
 .stretched-link {
     position: absolute;
     width: 100%;
