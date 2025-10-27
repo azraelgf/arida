@@ -2,12 +2,38 @@
     display: grid;
     gap: 1.25rem
 }
+.partner-popup__info .form {
+    gap: 1.875rem
+}
 .form__row_authorization {
     display: none;
     gap: .625rem
 }
 .form__row_authorization._active {
     display: flex
+}
+.partner-form__info .form__row {
+    display: grid;
+    gap: 1.25rem
+}
+.partner-popup__info .form__row {
+    display: grid;
+    gap: 1.25rem
+}
+.form__row-title {
+    font-weight: 600;
+    margin-bottom: 1.25rem
+}
+.partner-popup__info .form__row-title {
+    margin-bottom: 0
+}
+.form__row.form__row_span {
+    display: block
+}
+.form__row sup {
+    color: var(--red);
+    font-size: .875rem;
+    translate: 0 -.3125rem
 }
 .form__input {
     border: 2px solid var(--border)
@@ -20,6 +46,14 @@
     -webkit-transform: translateY(0);
     transform: translateY(0);
     display: block
+}
+.partner-form__info .form__input {
+    background-color: var(--white)
+}
+.form__checkboxes {
+    display: grid;
+    align-items: start;
+    gap: .625rem 1.25rem
 }
 .form__error {
     display: none;
@@ -88,6 +122,22 @@ textarea {
 .cart__checkout .input::placeholder {
     color: var(--primary)
 }
+.partner-form__info .input::-webkit-input-placeholder,
+.partner-popup__info .input::-webkit-input-placeholder {
+    color: var(--primary)
+}
+.partner-form__info .input:-ms-input-placeholder,
+.partner-popup__info .input:-ms-input-placeholder {
+    color: var(--primary)
+}
+.partner-form__info .input::-ms-input-placeholder,
+.partner-popup__info .input::-ms-input-placeholder {
+    color: var(--primary)
+}
+.partner-form__info .input::placeholder,
+.partner-popup__info .input::placeholder {
+    color: var(--primary)
+}
 .search-box .input {
     padding: 0;
     border-radius: 0
@@ -150,6 +200,17 @@ textarea.input {
 .middle-header__right .search-box__btn {
     pointer-events: none
 }
+@media (min-width:47.99875em) {
+    .partner-form__info .form__row {
+        grid-template-columns: repeat(2,1fr)
+    }
+    .form__checkboxes {
+        grid-template-columns: repeat(2,1fr)
+    }
+    .partner-popup__info .form__checkboxes {
+        grid-template-columns: 1fr
+    }
+}
 @media (max-width:47.99875em) {
     .form__error {
         font-size: .625rem
@@ -164,6 +225,15 @@ textarea.input {
 @media (max-width:29.99875em) {
     .form {
         gap: 1rem
+    }
+    .partner-popup__info .form {
+        gap: 1.25rem
+    }
+    .partner-form__info .form__row {
+        gap: .9375rem
+    }
+    .partner-popup__info .form__row {
+        gap: .9375rem
     }
     .form__text {
         font-size: .75rem

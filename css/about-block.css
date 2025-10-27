@@ -1,0 +1,148 @@
+.about__wrapper {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem
+}
+.about__top {
+    display: flex;
+    align-items: center;
+    gap: 2.1875rem;
+    margin-bottom: 2.1875rem
+}
+.about__logo {
+    max-width: 16.875rem;
+    width: 100%
+}
+.about__btn {
+    min-width: 12.125rem
+}
+.about__btn-mob {
+    min-width: 100%
+}
+.about__text {
+    line-height: 1.4;
+    margin-bottom: 1.25rem;
+    font-weight: 500
+}
+.about__text strong {
+    font-weight: 600
+}
+.about__text p+p {
+    margin-top: 1.25rem
+}
+.about__benefit {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 1.25rem
+}
+.about__benefit img {
+    width: 3.25rem
+}
+.about__benefit-label {
+    font-weight: 500;
+    display: inline-flex
+}
+.about__numbers {
+    max-width: 51.875rem
+}
+.about__video {
+    flex: 0 0 21.875rem
+}
+.about__video-wrapper {
+    height: 100%;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.about__video-btn {
+    width: 4.125rem
+}
+@media (min-width:47.99875em) {
+    .about__btn-mob {
+        display: none
+    }
+    .about__benefit-label {
+        border-radius: 6.25rem;
+        padding: .625rem 1.875rem;
+        min-height: 2.5rem;
+        background-color: var(--bg-primary)
+    }
+}
+@media (min-width:96em) {
+    .about__text {
+        font-size: 1rem
+    }
+    .about__benefit-label {
+        font-size: 1.125rem
+    }
+}
+@media (max-width:74.99875em) {
+    .about__wrapper {
+        flex-wrap: wrap;
+        margin-bottom: 1.25rem
+    }
+    .about__video {
+        flex: 1 1 100%
+    }
+    .about__video-wrapper {
+        min-height: 12.5rem
+    }
+}
+@media (max-width:61.99875em) {
+    .about__logo {
+        max-width: 13.75rem
+    }
+}
+@media (max-width:47.99875em) {
+    .about__btn-pk {
+        display: none
+    }
+    .about__benefit {
+        padding: 1.25rem;
+        flex-direction: column;
+        gap: 1.25rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--bg-primary);
+        border-radius: 1.25rem
+    }
+    .about__video-wrapper {
+        margin-bottom: 1.25rem;
+        min-height: 24.375rem
+    }
+}
+@media (max-width:29.99875em) {
+    .about__top {
+        margin-bottom: 1.25rem
+    }
+    .about__logo {
+        max-width: 11.875rem
+    }
+    .about__text p+p {
+        margin-top: 1rem
+    }
+    .about__video-btn {
+        width: 3.75rem
+    }
+}
+@media (max-width:22.5em) {
+    .about__text {
+        font-size: .875rem
+    }
+    .about__benefit-label {
+        font-size: 1rem
+    }
+}
+@media (min-width:22.5em)and (max-width:96em) {
+    .about__text {
+        font-size: clamp(.875rem ,.8367346939rem + .1700680272vw ,1rem)
+    }
+    .about__benefit-label {
+        font-size: clamp(1rem ,.9617346939rem + .1700680272vw ,1.125rem)
+    }
+}

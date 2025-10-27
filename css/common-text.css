@@ -120,6 +120,11 @@
         margin: .9375rem 0
     }
 }
+@media (max-width:29.99875em) {
+    .content-text {
+        padding-right: .625rem
+    }
+}
 @media (max-width:22.5em) {
     .content-text .list__item,
     .content-text .list__subitem,

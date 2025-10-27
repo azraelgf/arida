@@ -3,7 +3,8 @@
     visibility: hidden;
     opacity: 0
 }
-.swiper.benefits__slider {
+.swiper.benefits__slider,
+.swiper.video-items__slider {
     visibility: visible;
     opacity: 1
 }

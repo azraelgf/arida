@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Montserrat:ital,wght@0,100..900; 1,100..900&display=swap');
 :root {
     --primary-font: "Montserrat";
     --primary: #262626;
@@ -275,6 +275,10 @@ body.no-scroll {
     font-weight: 600;
     line-height: 1.2
 }
+.title.title_h3 small {
+    display: block;
+    font-weight: 400
+}
 .red-text {
     color: var(--red)
 }
@@ -401,10 +405,16 @@ body.no-scroll {
 .section {
     padding: 2.5rem 0
 }
+.section.section_intro {
+    padding: 3.75rem 0
+}
 .section__title {
     margin-bottom: 2.5rem
 }
 .section_inner .section__title {
+    margin-bottom: 1.875rem
+}
+.section_intro .section__title {
     margin-bottom: 1.875rem
 }
 .section__block {
@@ -421,6 +431,10 @@ body.no-scroll {
 .section.section_bottom {
     padding-top: 0;
     padding-bottom: 6.25rem
+}
+.section.section_bottom.section_intro {
+    padding-top: 0;
+    padding-bottom: 3.75rem
 }
 @media (min-width:29.99875em) {
     .more-block .button {
@@ -461,6 +475,9 @@ body.no-scroll {
     }
     .title.title_h3 {
         font-size: 1.5rem
+    }
+    .title.title_h3 small {
+        font-size: 1.375rem
     }
 }
 @media (max-width:96em) {
@@ -546,10 +563,16 @@ body.no-scroll {
     .section {
         padding: 1.25rem 0
     }
+    .section.section_intro {
+        padding: 2.5rem 0
+    }
     .section__title {
         margin-bottom: 1.25rem
     }
     .section_inner .section__title {
+        margin-bottom: 1.25rem
+    }
+    .section_intro .section__title {
         margin-bottom: 1.25rem
     }
     .section__block {
@@ -566,6 +589,9 @@ body.no-scroll {
         padding-top: 0;
         padding-bottom: 3.125rem
     }
+    .section.section_bottom.section_intro {
+        padding-bottom: 2.5rem
+    }
 }
 @media (max-width:22.5em) {
     .catalog-items .button.product__btn {
@@ -577,6 +603,9 @@ body.no-scroll {
     .title.title_h3 {
         font-size: 1.25rem
     }
+    .title.title_h3 small {
+        font-size: 1.125rem
+    }
 }
 @media (min-width:22.5em)and (max-width:96em) {
     .catalog-items .button.product__btn {
@@ -587,6 +616,9 @@ body.no-scroll {
     }
     .title.title_h3 {
         font-size: clamp(1.25rem ,1.1734693878rem + .3401360544vw ,1.5rem)
+    }
+    .title.title_h3 small {
+        font-size: clamp(1.125rem ,1.0484693878rem + .3401360544vw ,1.375rem)
     }
 }
 @media (any-hover:hover) {

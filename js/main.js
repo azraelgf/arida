@@ -1,4 +1,37 @@
 (() => {
+    const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+        let swiper;
+
+        breakpoint = window.matchMedia(breakpoint);
+
+        const enableSwiper = function (className, settings) {
+            swiper = new Swiper(className, settings);
+
+            if (callback) {
+                callback(swiper);
+            }
+        }
+
+        const checker = function () {
+            if (breakpoint.matches) {
+                return enableSwiper(swiperClass, swiperSettings);
+            } else {
+                if (swiper !== undefined) swiper.destroy(true, true);
+                return;
+            }
+        };
+
+        breakpoint.addEventListener('change', checker);
+        checker();
+    }
+
+    const someFunc = (instance) => {
+        if (instance) {
+            instance.on('slideChange', function (e) {
+                // console.log('*** mySwiper.activeIndex', instance.activeIndex);
+            });
+        }
+    };
 function initSliders() {
     if (document.querySelector(".hero__slider")) new Swiper(".hero__slider", {
         modules: [ Navigation, Pagination ],
@@ -143,50 +176,42 @@ function initSliders() {
         });
         container.dataset.swiperInited = "1";
     });
-    if (document.querySelector(".benefits__slider")) {
-        const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-            let swiper;
-            breakpoint = window.matchMedia(breakpoint);
-            const enableSwiper = function(className, settings) {
-                swiper = new Swiper(className, settings);
-                if (callback) callback(swiper);
-            };
-            const checker = function() {
-                if (breakpoint.matches) return enableSwiper(swiperClass, swiperSettings); else {
-                    if (swiper !== void 0) swiper.destroy(true, true);
-                    return;
-                }
-            };
-            breakpoint.addEventListener("change", checker);
-            checker();
-        };
-        const someFunc = instance => {
-            if (instance) instance.on("slideChange", function(e) {
-                console.log("*** mySwiper.activeIndex", instance.activeIndex);
+    if (document.querySelector('.benefits__slider')) {
+        const benefitsSliders = document.querySelectorAll('.benefits__slider');
+
+        if (benefitsSliders.length) {
+            benefitsSliders.forEach((slider, index) => {
+                resizableSwiper(
+                    '(max-width: 991.98px)',
+                    slider, // 👉 передаём конкретный элемент, а не селектор-строку
+                    {
+                        modules: [Navigation, Pagination],
+                        observer: true,
+                        observeParents: true,
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        speed: 800,
+                        pagination: {
+                            el: slider.querySelector('.swiper-pagination'), // 👈 локальная пагинация
+                            clickable: true,
+                        },
+                        breakpoints: {
+                            360: {
+                                slidesPerView: 1.1,
+                                spaceBetween: 10,
+                            },
+                            576: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                        },
+                    },
+                    someFunc
+                );
             });
-        };
-        resizableSwiper("(max-width: 991.98px)", ".benefits__slider", {
-            modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 10,
-            speed: 800,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-            breakpoints: {
-                360: {
-                    slidesPerView: 1.1,
-                    spaceBetween: 10
-                },
-                576: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                }
-            }
-        }, someFunc);
+        }
+
+
     }
 }
     initSliders()

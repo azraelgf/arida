@@ -4,7 +4,8 @@
 .checkbox:not(:last-child) {
     margin-bottom: .9375rem
 }
-.cart__info-top .checkbox:not(:last-child) {
+.cart__info-top .checkbox:not(:last-child),
+.form__checkboxes .checkbox:not(:last-child) {
     margin-bottom: 0
 }
 .form__row_checkboxes .checkbox:not(:last-child) {
@@ -47,7 +48,8 @@
     border-radius: .1875rem;
     transition: border-color .3s ease-in-out
 }
-.item-cart__checkbox .checkbox__label:before {
+.item-cart__checkbox .checkbox__label:before,
+.partner-form__info .checkbox__label:before {
     border-color: #f1eff2;
     background-color: var(--white)
 }
@@ -67,6 +69,15 @@
     font-weight: 500;
     line-height: 1.2
 }
+.partner-form__info .checkbox__text,
+.partner-popup__info .checkbox__text {
+    font-size: .6875rem;
+    font-weight: 400
+}
+.form__checkboxes .checkbox__text {
+    font-size: .875rem;
+    font-weight: 500
+}
 @media (max-width:47.99875em) {
     .cart__info-top .checkbox__text {
         font-size: .75rem
@@ -75,5 +86,8 @@
 @media (max-width:29.99875em) {
     .form__row_checkboxes .checkbox__text {
         font-size: .625rem
+    }
+    .form__checkboxes .checkbox__text {
+        font-size: .75rem
     }
 }

@@ -18,6 +18,7 @@
                 "oferta-polzovateli": "oferta-polzovateli",
                 "uslovia-obrabotki": "uslovia-obrabotki",
                 "uslovia-provedenia": "uslovia-provedenia",
+                "pop-partner": "pop-partner",
             }
 
             p = {}; //popup nodes

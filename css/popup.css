@@ -43,7 +43,7 @@
     position: fixed;
     z-index: 110;
     height: 100%;
-    padding: 2rem 2rem .625rem;
+    padding: 2rem 2rem 1.25rem;
     transition: .3s transform ease-in-out
 }
 .popup_xl .popup__box {
@@ -71,10 +71,21 @@
     row-gap: 14px;
     align-items: center
 }
+.popup_partner .popup__header {
+    align-items: flex-start
+}
 .popup__title {
     font-weight: 600;
     line-height: 1.2;
     max-width: 94%
+}
+.popup_partner .popup__title {
+    max-width: 20.625rem
+}
+.popup__title small {
+    font-weight: 500;
+    font-size: 1rem;
+    display: block
 }
 .popup__close {
     padding: 0
@@ -110,11 +121,16 @@
 .popup__content {
     display: flex;
     height: 100%;
-    max-height: 90%
+    max-height: 90%;
+    overflow-y: auto;
+    padding-right: 1.25rem
 }
 @media (min-width:96em) {
     .popup__title {
         font-size: 1.5rem
+    }
+    .popup_partner .popup__title {
+        font-size: 1.25rem
     }
     .popup__authorization-text {
         font-size: 1rem
@@ -148,10 +164,16 @@
     .popup__authorization-action {
         gap: .625rem
     }
+    .popup__content {
+        padding-right: .625rem
+    }
 }
 @media (max-width:22.5em) {
     .popup__title {
         font-size: 1.375rem
+    }
+    .popup_partner .popup__title {
+        font-size: 1.125rem
     }
     .popup__authorization-text {
         font-size: .875rem
@@ -163,6 +185,9 @@
 @media (min-width:22.5em)and (max-width:96em) {
     .popup__title {
         font-size: clamp(1.375rem ,1.3367346939rem + .1700680272vw ,1.5rem)
+    }
+    .popup_partner .popup__title {
+        font-size: clamp(1.125rem ,1.0867346939rem + .1700680272vw ,1.25rem)
     }
     .popup__authorization-text {
         font-size: clamp(.875rem ,.8367346939rem + .1700680272vw ,1rem)
