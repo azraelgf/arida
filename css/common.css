@@ -243,6 +243,9 @@ body.no-scroll {
 .product .button_light .button__icon {
     color: var(--secondary)
 }
+.contacts__info-actions .button_light {
+    color: var(--secondary)
+}
 .menu__item .button {
     min-height: 2.5rem
 }
@@ -264,6 +267,9 @@ body.no-scroll {
 .more-block .button {
     min-height: 2.5rem;
     padding: 5px 20px
+}
+.contacts__info-actions .button {
+    font-size: .875rem
 }
 .page {
     padding-top: 11.4375rem
@@ -536,6 +542,15 @@ body.no-scroll {
     .button_more {
         min-height: 2.875rem
     }
+    .contacts__info-actions .button_black {
+        background-color: rgba(0,0,0,0);
+        padding-left: 0;
+        padding-right: 0;
+        text-decoration: underline;
+        color: var(--primary);
+        font-weight: 700;
+        min-width: initial
+    }
     .menu__item .button {
         min-height: 2.5rem
     }
@@ -651,6 +666,9 @@ body.no-scroll {
         color: var(--white)
     }
     .button_light:hover .button__icon-arrow {
+        color: var(--white)
+    }
+    .contacts__info-actions .button_light:hover {
         color: var(--white)
     }
     .button.button_icon.button_black:hover {

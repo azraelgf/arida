@@ -35,9 +35,20 @@
     border-radius: .625rem;
     overflow: hidden
 }
+.address-shop_fw .address-shop__map {
+    flex: 0 0 66%
+}
 #map {
     width: 100%;
     height: 26.75rem
+}
+.address-shop_fw #map {
+    height: 39.75rem
+}
+.content-address__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem
 }
 .content-address__item:first-child .content-address__btn {
     border-top: 1px solid var(--border)
@@ -146,6 +157,11 @@
     line-height: 1.2;
     font-size: .75rem
 }
+@media (max-width:96em) {
+    .address-shop_fw #map {
+        height: 26.75rem
+    }
+}
 @media (max-width:74.99875em) {
     .address-shop__inner {
         flex-wrap: wrap
@@ -153,10 +169,19 @@
     .address-shop__map {
         flex: 1 1 100%
     }
+    .address-shop_fw .address-shop__map {
+        flex: 1 1 100%
+    }
 }
 @media (max-width:47.99875em) {
     #map {
         height: 23.75rem
+    }
+    .address-shop_fw #map {
+        height: 23.75rem
+    }
+    .content-address__title {
+        font-size: 1.125rem
     }
     .content-address__btn {
         font-size: .875rem;
