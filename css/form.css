@@ -71,6 +71,10 @@
     align-items: start;
     gap: .625rem 1.25rem
 }
+.form__label {
+    font-weight: 500;
+    margin-bottom: 1.25rem
+}
 .form__error {
     display: none;
     font-weight: 500;
@@ -245,6 +249,9 @@ textarea.input {
 @media (max-width:47.99875em) {
     .form.form_item {
         gap: 1.25rem
+    }
+    .form__label {
+        margin-bottom: .9375rem
     }
     .form__error {
         font-size: .625rem

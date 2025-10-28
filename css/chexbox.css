@@ -69,6 +69,12 @@
     font-weight: 500;
     line-height: 1.2
 }
+.checkbox__text strong {
+    font-weight: 600
+}
+.profile__form .checkbox__text {
+    font-size: .75rem
+}
 .partner-form__info .checkbox__text,
 .partner-popup__info .checkbox__text {
     font-size: .6875rem;
@@ -79,6 +85,9 @@
     font-weight: 500
 }
 @media (max-width:47.99875em) {
+    .profile__form .checkbox__text {
+        font-size: .6875rem
+    }
     .cart__info-top .checkbox__text {
         font-size: .75rem
     }
