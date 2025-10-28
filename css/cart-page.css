@@ -140,14 +140,14 @@
 .beige-cart_better {
     background-color: var(--beige-yellow)
 }
-.item-cart {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.25rem
-}
 .item-cart:last-child {
     padding-bottom: 1.25rem;
     border-bottom: 1px solid var(--border)
+}
+.item-cart__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem
 }
 .item-cart__img {
     flex: 0 0 10.25rem;
@@ -287,12 +287,18 @@
 .checkout__item+.checkout__item {
     margin-top: 1.25rem
 }
+.checkout__item:nth-last-of-type(2) {
+    padding-bottom: 0;
+    border-bottom: 0
+}
 .checkout__title {
     margin-bottom: 1.25rem
 }
 .checkout__text {
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.4
+}
+.checkout__text:not(:last-child) {
     margin-bottom: 1.25rem
 }
 .checkout__text small {
@@ -309,6 +315,9 @@
         margin-bottom: 1.5625rem
     }
     .cart-sidebar__info-text._hidden {
+        display: none
+    }
+    .item-cart__parameters.item-cart__parameters_mob {
         display: none
     }
 }
@@ -372,7 +381,7 @@
     .cart__sidebar {
         flex: 0 0 20rem
     }
-    .item-cart {
+    .item-cart__inner {
         gap: 1rem
     }
     .item-cart__img {
@@ -440,6 +449,9 @@
     .item-cart__parameters-btn._spoiler-active:after {
         rotate: 180deg
     }
+    .checkout__item:not(:last-child) {
+        padding-bottom: 1.875rem
+    }
     .checkout__item-switches {
         gap: .9375rem
     }
@@ -480,17 +492,27 @@
     .cart-sidebar__info-text._hidden-mob {
         display: none
     }
-    .item-cart {
-        flex-wrap: wrap
-    }
     .item-cart__img {
-        flex: 1 1 100%
+        flex: 0 0 4rem
     }
     .item-cart__img img {
         max-height: 16.25rem
     }
+    .item-cart__checkbox {
+        top: .3125rem;
+        left: .3125rem
+    }
+    .item-cart__item {
+        gap: .9375rem
+    }
     .item-cart__beiges {
         gap: .3125rem
+    }
+    .item-cart__parameters.item-cart__parameters_pk {
+        display: none
+    }
+    .item-cart__parameters.item-cart__parameters_mob {
+        margin-top: 1.25rem
     }
     .item-cart__actions {
         flex: 1 1 auto
@@ -503,6 +525,9 @@
     }
     .item-cart__quantity {
         min-width: 100%
+    }
+    .checkout__item._hidden-mob {
+        display: none
     }
 }
 @media (max-width:22.5em) {

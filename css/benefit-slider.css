@@ -65,6 +65,11 @@
         padding: 1.25rem .9375rem
     }
 }
+@media (max-width:29.99875em) {
+    .about_page .benefits {
+        display: none
+    }
+}
 @media (max-width:22.5em) {
     .benefit__title {
         font-size: .875rem

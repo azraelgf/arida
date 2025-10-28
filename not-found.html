@@ -1238,7 +1238,6 @@
 	</div>
 
 
-	<!--при открытом состоянии добавляется класс popup-opened-->
 	<div class="popup " id="pop-log">
 		<div class="popup__overlay"></div>
 		<div class="popup__box">
@@ -1263,7 +1262,7 @@
 							<input class="form__input input" autocomplete="off" type="password" name="form[]" placeholder="Пароль ">
 						</div>
 						<div class="form__row">
-							<button class="form__link" data-opener data-popup="pop-authorization">Забыли свой пароль?</button>
+							<button class="form__link" data-opener data-popup="pop-authorization" type="button">Забыли свой пароль?</button>
 						</div>
 						<div class="form__row">
 							<button class="button button_black button_fw" type="submit">Войти</button>
@@ -1274,7 +1273,7 @@
 					<button class="button button_outline button_fw" type="button" data-opener data-popup="pop-sign-up">Зарегистрироваться</button>
 					<div class="popup__authorization-text">
 						<small> Регистрируясь на <span>Aridamebel.ru</span> или авторизуясь, вы соглашаетесь с <a href="">пользовательским
-								соглашением</a> и <a href="">политикой конфиденциальности</a>.</small>
+							соглашением</a> и <a href="">политикой конфиденциальности</a>.</small>
 					</div>
 				</div>
 			</div>
@@ -1314,7 +1313,7 @@
 				<div class="popup__authorization-action">
 					<div class="popup__authorization-text">
 						<small> Регистрируясь на <span>Aridamebel.ru</span> или авторизуясь, вы соглашаетесь с <a href="">пользовательским
-								соглашением</a> и <a href="">политикой конфиденциальности</a>.</small>
+							соглашением</a> и <a href="">политикой конфиденциальности</a>.</small>
 					</div>
 				</div>
 			</div>
@@ -1343,18 +1342,13 @@
 							<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="Телефон">
 						</div>
 						<div class="form__row form__row_authorization">
-							<div class="form__column">
-								<input required class=" form__input input" autocomplete="off" type="password" name="form[]" placeholder="-">
-							</div>
-							<div class="form__column">
-								<input required class=" form__input input" autocomplete="off" type="password" name="form[]" placeholder="-">
-							</div>
-							<div class="form__column">
-								<input required class=" form__input input" autocomplete="off" type="password" name="form[]" placeholder="-">
-							</div>
-							<div class="form__column">
-								<input required class=" form__input input" autocomplete="off" type="password" name="form[]" placeholder="-">
-							</div>
+							<input class="form__input input js-input_auth" required type="text" inputmode="numeric" maxlength="1" placeholder="-" autocomplete="one-time-code">
+
+							<input class="form__input input js-input_auth" required type="text" inputmode="numeric" maxlength="1" placeholder="-" autocomplete="one-time-code">
+
+							<input class="form__input input js-input_auth" required type="text" inputmode="numeric" maxlength="1" placeholder="-" autocomplete="one-time-code">
+
+							<input class="form__input input js-input_auth" required type="text" inputmode="numeric" maxlength="1" placeholder="-" autocomplete="one-time-code">
 						</div>
 						<div class="form__row">
 							<button class="form__button button button_black button_fw js-phone-authorization" type="button">Получить код подтверждения</button>
@@ -1364,7 +1358,7 @@
 				<div class="popup__authorization-action">
 					<div class="popup__authorization-text">
 						<small> Регистрируясь на <span>Aridamebel.ru</span> или авторизуясь, вы соглашаетесь с <a href="">пользовательским
-								соглашением</a> и <a href="">политикой конфиденциальности</a>.</small>
+							соглашением</a> и <a href="">политикой конфиденциальности</a>.</small>
 					</div>
 				</div>
 			</div>

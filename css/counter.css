@@ -19,6 +19,9 @@
     position: relative;
     cursor: pointer
 }
+.page_product .quantity__button {
+    flex: 1 1 30%
+}
 .quantity__button::after,
 .quantity__button::before {
     content: "";
@@ -47,10 +50,25 @@
 .quantity__input input:focus {
     outline: 0
 }
+.page_product .quantity__input {
+    flex: 1 1 40%
+}
 ._qty-noactive .quantity {
     opacity: 0;
     visibility: hidden;
     pointer-events: none
+}
+@media (min-width:61.99875em) {
+    .page_product .quantity__button_plus::after,
+    .page_product .quantity__button_plus::before {
+        top: 50%;
+        left: 0
+    }
+    .page_product .quantity__button_minus::after,
+    .page_product .quantity__button_minus::before {
+        right: 0;
+        left: auto
+    }
 }
 @media (min-width:96em) {
     .quantity__input input {
@@ -72,7 +90,7 @@
 }
 @media (max-width:29.99875em) {
     .item-cart .quantity {
-        min-width: 100%
+        min-width: 11.5625rem
     }
 }
 @media (max-width:22.5em) {

@@ -169,6 +169,9 @@ body.no-scroll {
     background-color: var(--bg-accent);
     transition: background-color .3s ease-in-out,color .3s ease-in-out
 }
+.button i{
+  font-style: normal;
+}
 .button__icon {
     color: var(--white);
     width: .5625rem;
@@ -180,6 +183,11 @@ body.no-scroll {
     color: var(--primary);
     margin-left: -.875rem;
     transition: all .3s ease-in-out
+}
+.about__btn .button__icon-arrow,
+.partner-form__btn .button__icon-arrow {
+    width: 20px;
+    margin-left: 0
 }
 .button__icon-cart {
     width: 1.375rem;
@@ -437,6 +445,9 @@ body.no-scroll {
 .section.section_bottom {
     padding-top: 0;
     padding-bottom: 6.25rem
+}
+.page_product .section.section_bottom {
+    padding-bottom: 3.125rem
 }
 .section.section_bottom.section_intro {
     padding-top: 0;

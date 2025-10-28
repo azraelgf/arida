@@ -1,0 +1,32 @@
+.input-phwrap {
+    position: relative;
+    display: block
+}
+.input-phwrap .fake-ph {
+    font-weight: 500;
+    position: absolute;
+    left: var(--ph-left,14px);
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--primary);
+    font-size: inherit;
+    line-height: 1;
+    white-space: nowrap;
+    max-width: calc(100% - 2rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: opacity .18s ease,-webkit-transform .18s ease;
+    transition: opacity .18s ease,transform .18s ease;
+    transition: opacity .18s ease,transform .18s ease,-webkit-transform .18s ease
+}
+.input-phwrap .fake-ph__star {
+    color: var(--red)
+}
+.input-phwrap.has-focus .fake-ph,
+.input-phwrap.has-value .fake-ph {
+    opacity: 0;
+    -webkit-transform: translateY(-50%) scale(.98);
+    transform: translateY(-50%) scale(.98)
+}

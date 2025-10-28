@@ -4,8 +4,9 @@
     display: flex;
     align-items: center;
     color: var(--white);
-    min-height: 20.3125rem;
-    margin-bottom: 2.5rem
+    margin-bottom: 2.5rem;
+    max-height: 20.3125rem;
+    padding-right: 1.25rem
 }
 .banner-hero__img {
     position: absolute;
@@ -18,15 +19,13 @@
 }
 .banner-hero__img img {
     -o-object-fit: cover;
-    object-fit: cover;
-    max-height: 20.3125rem
+    object-fit: cover
 }
 .banner-hero__content {
     position: relative;
-    z-index: 2
-}
-.banner-hero__title {
-    margin-bottom: 1.25rem;
+    z-index: 2;
+    display: grid;
+    gap: 1.25rem;
     max-width: 40rem
 }
 .banner-hero__logo {
@@ -135,12 +134,19 @@
 .text-block__item strong {
     font-weight: 600
 }
-@media (min-width:96em) {
+@media (min-width:75em) {
     .banner-hero__wrapper {
         min-height: 20.3125rem
     }
+}
+@media (min-width:96em) {
     .benefits-about__item {
         font-size: 1rem
+    }
+}
+@media (max-width:30em) {
+    .banner-hero__wrapper {
+        min-height: 12.5rem
     }
 }
 @media (max-width:74.99875em) {
@@ -207,19 +213,21 @@
     .banner-hero__info-text {
         font-size: .875rem
     }
+    .benefits-about__call._hidden {
+        display: none
+    }
 }
 @media (max-width:22.5em) {
-    .banner-hero__wrapper {
-        min-height: 12.5rem
-    }
     .benefits-about__item {
         font-size: .875rem
     }
 }
-@media (min-width:22.5em)and (max-width:96em) {
+@media (min-width:30em)and (max-width:75em) {
     .banner-hero__wrapper {
-        min-height: clamp(12.5rem ,10.1084183673rem + 10.6292517007vw ,20.3125rem)
+        min-height: clamp(12.5rem ,7.2916666667rem + 17.3611111111vw ,20.3125rem)
     }
+}
+@media (min-width:22.5em)and (max-width:96em) {
     .benefits-about__item {
         font-size: clamp(.875rem ,.8367346939rem + .1700680272vw ,1rem)
     }
