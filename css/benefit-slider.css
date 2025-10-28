@@ -32,6 +32,10 @@
     line-height: 1.4;
     color: #6c6c6c
 }
+.benefit__text strong {
+    font-weight: 600;
+    color: var(--primary)
+}
 @media (min-width:61.99875em) {
     .benefits__wrapper.swiper-wrapper {
         display: grid;

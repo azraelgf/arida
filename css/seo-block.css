@@ -12,6 +12,15 @@
 .seo-block__intro strong {
     font-weight: 600
 }
+.seo-block__content ul,
+.seo-block__intro ul {
+    margin: 1rem 0;
+    padding-left: 1.25rem
+}
+.seo-block__content ul li,
+.seo-block__intro ul li {
+    list-style: disc
+}
 .seo-block__intro {
     transition: margin .3s ease-in-out
 }
@@ -33,6 +42,10 @@
     .seo-block__intro {
         font-size: .875rem;
         line-height: 1.5
+    }
+    .seo-block__content ul,
+    .seo-block__intro ul {
+        margin: .75rem 0
     }
     ._showmore-active .seo-block__intro {
         margin-bottom: .75rem

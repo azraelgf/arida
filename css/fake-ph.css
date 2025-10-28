@@ -30,3 +30,8 @@
     -webkit-transform: translateY(-50%) scale(.98);
     transform: translateY(-50%) scale(.98)
 }
+@media (max-width:47.99875em) {
+    .input-phwrap .fake-ph {
+        font-size: .75rem
+    }
+}

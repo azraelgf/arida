@@ -30,6 +30,10 @@
     position: relative;
     z-index: 2
 }
+.offer__actions {
+    display: flex;
+    gap: .625rem
+}
 @media (min-width:29.99875em) {
     .offer__btn {
         min-width: 16.5rem
@@ -116,6 +120,9 @@
     }
     .offer__content-block {
         min-width: 100%
+    }
+    .offer__actions .offer__btn {
+        flex: 1 1 50%
     }
 }
 @media (min-width:61.99875em)and (max-width:74.99875em) {

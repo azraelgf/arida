@@ -32,6 +32,9 @@
     position: absolute;
     width: 100%
 }
+._header-scroll .header__middle {
+    display: block
+}
 .top-header {
     position: relative;
     z-index: 5;
@@ -262,6 +265,18 @@
         transform: translateY(0)
     }
 }
+.header__back {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+    transition: color .3s ease-in-out
+}
+.header__back svg {
+    rotate: 180deg;
+    width: 1.125rem;
+    height: .625rem
+}
 @media (min-width:47.99875em) {
     .middle-header__right-search {
         max-width: 11.875rem
@@ -285,8 +300,14 @@
     .menu__link-text {
         color: var(--red)
     }
+    .header_cart .header__middle {
+        display: none
+    }
     .header__bottom {
         padding-bottom: 1.625rem
+    }
+    .header_cart .bottom-header {
+        display: none
     }
 }
 @media (min-width:96em) {
@@ -438,6 +459,9 @@
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg)
     }
+    .header__top .middle-header__logo {
+        display: none
+    }
     ._header-show .middle-header__right-search {
         display: none
     }
@@ -460,6 +484,10 @@
         justify-content: space-between;
         flex: 1 1 auto
     }
+    .header_cart .top-header__left {
+        justify-content: stretch;
+        flex: 0 0 auto
+    }
     .top-header__right {
         display: none
     }
@@ -471,6 +499,9 @@
     }
     ._header-show .menu__body {
         padding-top: 8.75rem
+    }
+    .top-header__tel {
+        display: none
     }
     .middle-header__right-search {
         position: absolute;
@@ -486,6 +517,16 @@
     .mobile-submenu {
         padding-top: 11.25rem;
         padding-bottom: 5.625rem
+    }
+    .header__back {
+        padding: .375rem
+    }
+    .header__back span {
+        display: none
+    }
+    .header__back svg {
+        width: 1.375rem;
+        height: .75rem
     }
 }
 @media (max-width:29.99875em) {
@@ -533,5 +574,8 @@
     .menu-middle__link-catalog:hover {
         background-color: var(--primary);
         color: var(--white)
+    }
+    .header__back:hover {
+        color: var(--bg-accent)
     }
 }

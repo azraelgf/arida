@@ -5,6 +5,21 @@
 .partner-popup__info .form {
     gap: 1.875rem
 }
+.form.form_item {
+    gap: 2.5rem
+}
+.form__item {
+    display: grid;
+    gap: 1.25rem
+}
+.form__item strong {
+    line-height: 1.2;
+    display: block;
+    font-weight: 600
+}
+.form__item strong sup {
+    color: var(--red)
+}
 .form__row_authorization {
     display: none;
     gap: .625rem
@@ -38,7 +53,8 @@
 .form__input {
     border: 2px solid var(--border)
 }
-.form_checkout .form__input {
+.form_checkout .form__input,
+.form_item .form__input {
     max-width: 21.875rem
 }
 .form__input._form-error+.form__error {
@@ -65,6 +81,12 @@
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
     transition: all .3s ease
+}
+.form__error._form-error {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    display: block
 }
 .form__link {
     text-decoration: underline;
@@ -110,15 +132,19 @@ textarea {
 .input::placeholder {
     color: #d8d8d8
 }
+.calc__form .input::-webkit-input-placeholder,
 .cart__checkout .input::-webkit-input-placeholder {
     color: var(--primary)
 }
+.calc__form .input:-ms-input-placeholder,
 .cart__checkout .input:-ms-input-placeholder {
     color: var(--primary)
 }
+.calc__form .input::-ms-input-placeholder,
 .cart__checkout .input::-ms-input-placeholder {
     color: var(--primary)
 }
+.calc__form .input::placeholder,
 .cart__checkout .input::placeholder {
     color: var(--primary)
 }
@@ -200,6 +226,11 @@ textarea.input {
 .middle-header__right .search-box__btn {
     pointer-events: none
 }
+@media (min-width:29.99875em) {
+    .calc__form .form__button {
+        min-width: 21.875rem
+    }
+}
 @media (min-width:47.99875em) {
     .partner-form__info .form__row {
         grid-template-columns: repeat(2,1fr)
@@ -212,6 +243,9 @@ textarea.input {
     }
 }
 @media (max-width:47.99875em) {
+    .form.form_item {
+        gap: 1.25rem
+    }
     .form__error {
         font-size: .625rem
     }
@@ -228,6 +262,9 @@ textarea.input {
     }
     .partner-popup__info .form {
         gap: 1.25rem
+    }
+    .calc__wrapper .form__item {
+        gap: .625rem
     }
     .partner-form__info .form__row {
         gap: .9375rem

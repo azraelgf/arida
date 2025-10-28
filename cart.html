@@ -46,9 +46,16 @@
 
 <body>
 <div class="wrapper">
-	<header class="header" data-scroll="120" data-scroll-show>
+	<header class="header header_cart" data-scroll="120" data-scroll-show>
 		<div class="header__top top-header">
 			<div class="top-header__container">
+				<a href="" class="header__back">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#arrow"></use>
+					</svg>
+					<span>Вернуться к покупкам</span>
+				</a>
+				<a href="/" class="middle-header__logo logo"><img src="img/logo.svg" alt="Logo"></a>
 				<div class="top-header__left">
 					<button class="top-header__address modal-btn" type="button" data-modal-name="pop_address">
 						<svg class="top-header__address-icon">
@@ -61,22 +68,6 @@
 					</button>
 					<a href="tel:+78002500700" class="top-header__tel">+7 (800) 2-500-700</a>
 				</div>
-				<nav class="top-header__right">
-					<ul class="top-header__list">
-						<li class="top-header__item">
-							<a href="" class="top-header__link">Адреса магазинов <span>84</span></a>
-						</li>
-						<li>
-							<a href="" class="top-header__link">О фабрике </a>
-						</li>
-						<li class="top-header__item">
-							<a href="" class="top-header__link">Стать партнером</a>
-						</li>
-						<li class="top-header__item">
-							<a href="" class="top-header__link">Контакты</a>
-						</li>
-					</ul>
-				</nav>
 			</div>
 		</div>
 		<div class="header__middle middle-header">
@@ -444,7 +435,7 @@
 		</div>
 	</header>
 
-	<main class="page">
+	<main class="page page_cart">
 		<nav class="breadcrumbs">
 			<div class="breadcrumbs__container">
 				<ul class="breadcrumbs__list">
