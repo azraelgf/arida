@@ -136,10 +136,10 @@
     height: 5rem
 }
 .sidebar-calc__title {
-    margin-bottom: .625rem
+    margin-bottom: 1rem
 }
 .sidebar-calc__category {
-    margin-bottom: .625rem;
+    margin-bottom: 1rem;
     font-weight: 600
 }
 .sidebar-calc__category a {

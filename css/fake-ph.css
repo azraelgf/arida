@@ -5,7 +5,7 @@
 .input-phwrap .fake-ph {
     font-weight: 500;
     position: absolute;
-    left: var(--ph-left,14px);
+    left: var(--ph-left,20px);
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);

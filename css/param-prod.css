@@ -2,7 +2,7 @@
     line-height: 1.2;
     font-weight: 600;
     font-size: 1rem;
-    padding-bottom: .625rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid var(--border)
 }
 .param-product__item {
