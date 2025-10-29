@@ -209,6 +209,11 @@
 .order strong {
     font-weight: 600
 }
+@media (min-width:29.99875em) {
+    .orders__btn {
+        min-width: 15.875rem
+    }
+}
 @media (min-width:61.99875em) {
     .order__title {
         max-width: 50rem
